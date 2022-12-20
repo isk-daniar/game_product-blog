@@ -1,0 +1,24 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="pymysql.cursors" />
+          <option value="taskmanager.main.migrations.main.views" />
+          <option value="psycopg.config" />
+          <option value="password_generator1project.password_generator.urls.password_generator" />
+          <option value="generator.views.password" />
+          <option value="a.cv" />
+          <option value="a.np" />
+          <option value="cv2.imwrite" />
+          <option value="cv2.imread" />
+          <option value="cv2.resize" />
+          <option value="cv2.imshow" />
+          <option value="cv2.waitKey" />
+          <option value="cv2.minMaxLoc" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
