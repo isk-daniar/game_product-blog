@@ -12,16 +12,15 @@ class Category(MPTTModel):
         blank=True
     )
 
+    def __str__(self):
+        return self.name
+
 class MPTTMeta:
     level_attr = 'mptt_level'
     order_insertion_by = ['name']
 
-class Tag(models.Model):
-    name = models.CharField(max_length=100)
-    slug = models.SlugField(max_length=100)
-
 class PostBlog(models.Model):
-    title = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
     description = models.CharField(max_length=250)
     category = models.ForeignKey(
         Category,
@@ -32,14 +31,19 @@ class PostBlog(models.Model):
     image = models.ImageField(upload_to='Blog/images/')
     url = models.URLField(blank=True)
     create_at = models.DateTimeField(auto_now_add=True)
-    tags = models.ManyToManyField(Tag, related_name="post")
 
 class ExpandPost(models.Model):
-    title = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
     create_at = models.DateTimeField(auto_now_add=True)
     category = models.ForeignKey(
         Category,
-        related_name="post",
+        related_name="expandpost",
+        on_delete=models.SET_NULL,
+        null=True
+    )
+    postblog = models.ForeignKey(
+        PostBlog,
+        related_name="expandpostblog",
         on_delete=models.SET_NULL,
         null=True
     )
@@ -47,7 +51,7 @@ class ExpandPost(models.Model):
     url = models.URLField(blank=True)
 
 class RecentPosts(models.Model):
-    title = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
     image = models.ImageField(upload_to='Blog/images/')
     post = models.ForeignKey(
         PostBlog,
