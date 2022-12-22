@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet"  href="./static/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap&subset=cyrillic" rel="stylesheet">
+</head>
+<body>
+    	<header class="wrapper">
+            <div class="header header_bg-color">
+				<ul class="header_list">
+					<li class="header_item">
+						<a href="" class="header_link">blog</a>
+					</li>
+					<li class="header_item">
+						<a href="" class="header_link">about</a>
+					</li>
+					<li class="header_item">
+						<a href="" class="header_link">media</a>
+					</li>
+					<li class="header_item">
+						<a href="" class="header_link">community</a>
+					</li>
+                    <li class="header_item">
+						<a href="" class="header_link">purchase</a>
+					</li>
+                    <li class="header_item">
+						<a href="" class="header_link">support</a>
+					</li>
+				</ul>
+		    </div>
+	</header>
+
+    <!-- Content start -->
+    <main class="main">
+        {% block content %}{% endblock %}
+    </main>
+
+
+
+</body>
+</html>
