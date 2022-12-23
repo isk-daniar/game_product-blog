@@ -32,7 +32,9 @@
 	font-weight: 800;
 	font-style: normal;
 }
-
+* {
+    box-sizing: border-box;
+}
 body {
 	margin: 0;
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -60,6 +62,7 @@ body {
 	margin: 0 auto;
 	min-height: 89px;
 	background-color: #000000;
+	border-radius: 10px;
 }
 .wrapper{
 	padding-top: 29px;
@@ -74,20 +77,23 @@ body {
 	padding: 0;
 	margin: 0;
 	margin-left: -20px;
+
 }
 .header_item{
 	display: flex;
 	align-items: stretch;
 	justify-content: center;
 	min-height: 89px;
+	border-radius: 10px;
+	transition: background 0.5s;
 }
 .header_item:hover{
-	background-color: #ff3f40;
+	background-color: rgba(255,255,255,0.5);
 }
 .header_link{
 	display: flex;
 	align-items: center;
-	padding: 0 30px;
+	padding: 0 60px;
 	color: #e0e0e0;
 	font-size: 14px;
 	font-weight: bold;
@@ -95,41 +101,50 @@ body {
 	text-transform: uppercase;
 }
 
-/* blog-post */
-
-.blog-post{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: flex-start;
-	max-width: 1249px;
-	margin: 0 auto;
-	padding-left: 1vw;
-	padding-right: 1vw;
-	padding-top: 94px;
-	padding-bottom: 52px
+/* footer */
+.share-footer{
+    padding: 10px 0;
 }
-.blog-post_button_filter{
-		width: 100%;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	margin-bottom: 60px;
+.misc-wrapper{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1249px;
+    margin-bottom: 15px;
+    font-size: 90%;
 }
-.blog-post_link{
-	position: relative;
-    left: 45px;
-	color: #000;
-	margin-right: 55px;
-	font-size: 22px;
-	font-weight: 600;
-	text-transform: uppercase;
-	text-decoration: none;
-	opacity: 0.7;
+@media (min-width: 768px)
+.col-sm-4 {
+    width: 33.3333333333%;
+    float: left;
 }
-1
 
-
+.btn{
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    border-radius: 0px;
+    position: relative;
+    white-space: normal;
+    transition: color 0.5s, opacity 0.5s, border-color 0.5s, background-color 0.5s;
+}
+.btn-default{
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.box-cell {
+    display: table-cell !important;
+}

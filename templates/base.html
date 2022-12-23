@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet"  href="./static/css/style.css">
+	<link rel="stylesheet"  href="./static/css/base-style.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap&subset=cyrillic" rel="stylesheet">
 </head>
 <body>
@@ -40,7 +40,56 @@
         {% block content %}{% endblock %}
     </main>
 
-
-
+	<footer class="main-footer">
+		<div class="footer">
+			<div class="share-footer">
+				<div class="misc-wrapper clear">
+					<div class="col-sm-4 text-center">
+						<a href="" target="_blank" rel="noreferrer noopener" class="inline-block btn-facebook">
+							<div class="btn btn box-cell">
+								<i class="fa fa-facebook fa-2x fa-fw" style="margin-top: 4px;"></i>
+							</div>
+							<div class="btn btn-blank box-cell">
+								<div class="text-lower">
+									<span class="text-top">GameProduct</span>
+									<br>
+									"FACEBOOK "
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-sm-4 text-center">
+						<a href="" target="_blank" rel="noreferrer noopener" class="inline-block btn-facebook">
+							<div class="btn btn box-cell">
+								<i class="fa fa-facebook fa-2x fa-fw" style="margin-top: 4px;"></i>
+							</div>
+							<div class="btn btn-blank box-cell">
+								<div class="text-lower">
+									<span class="text-top">GameProduct</span>
+									<br>
+									"TWITTER "
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-sm-4 text-center">
+						<a href="" target="_blank" rel="noreferrer noopener" class="inline-block btn-facebook">
+							<div class="btn btn box-cell">
+								<i class="fa fa-facebook fa-2x fa-fw" style="margin-top: 4px;"></i>
+							</div>
+							<div class="btn btn-blank box-cell">
+								<div class="text-lower">
+									<span class="text-top">GameProduct</span>
+									<br>
+									"YOUTUBE "
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+<script src="base.js"></script>
 </body>
 </html>
