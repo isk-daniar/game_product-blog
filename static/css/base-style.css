@@ -1,0 +1,226 @@
+@font-face {
+	src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+	font-family: 'Open Sans';
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	src: url('../fonts/OpenSans-Italic.ttf') format('truetype');
+	font-family: 'Open Sans';
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	src: url('../fonts/OpenSans-SemiBold.ttf') format('truetype');
+	font-family: 'Open Sans';
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	src: url('../fonts/OpenSans-Bold.ttf') format('truetype');
+	font-family: 'Open Sans';
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	src: url('../fonts/OpenSans-ExtraBold.ttf') format('truetype');
+	font-family: 'Open Sans';
+	font-weight: 800;
+	font-style: normal;
+}
+* {
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+	margin: 0;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	color: #e0e0e0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-image: url(/media/background-image/background_imag-icon-1e.jpg);
+}
+a{
+    outline: 0;
+    color: #fff;
+    transition: all 0.5s;
+}
+.main {
+	flex-grow: 1;
+}
+.main_intro_bg-color{
+	background-color: #e0e0e0;
+}
+
+/* header */
+
+.header{
+	box-sizing: border-box;
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+	width: 100%;
+	max-width: 1249px;
+	margin: 0 auto;
+	min-height: 89px;
+	background-color: #000000;
+	border-radius: 10px;
+}
+.wrapper{
+	padding-top: 29px;
+}
+
+.header_list{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin-left: -20px;
+
+}
+.header_item{
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+	min-height: 89px;
+	border-radius: 10px;
+	transition: background 0.5s;
+}
+.header_item:hover{
+	background-color: rgba(255,255,255,0.5);
+}
+.header_link{
+	display: flex;
+	align-items: center;
+	padding: 0 60px;
+	color: #e0e0e0;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+/* footer */
+.widgets-wrapper{
+    adding: 0 0 20px;
+}
+.share-footer{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1249px;
+    margin-bottom: 15px;
+    font-size: 90%;
+}
+.share-footer .misc-wrapper {
+  padding: 10px 0;
+  margin-bottom: 0;
+}
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+.text-center {
+    text-align: center;
+}
+@media (min-width: 768px) {
+.col-sm-4{
+    float: left;
+}
+.col-sm-4 {
+    width: 33.3333333333%;
+}
+}
+.inline-block {
+    display: inline-block;
+}
+.btn{
+    padding: 1px 5px;
+    position: relative;
+    white-space: normal;
+    transition: color 0.5s, opacity 0.5s, border-color 0.5s, background-color 0.5s;
+}
+.box-cell {
+    display: table-cell !important;
+}
+.btn-default{
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.btn-facebook .fa {
+    transition: color 0.5s;
+}
+.fa-fw {
+    width: 1.28571429em;
+    text-align: center;
+}
+.fa-2x {
+    font-size: 2.5em;
+}
+.text-left {
+    text-align: left;
+    font-size: 20px
+}
+.text-light {
+    font-weight: 300;
+}
+#main-footer .misc-wrapper,
+#main-footer .widgets-wrapper,
+.share-footer .misc-wrapper,
+.share-footer .widgets-wrapper {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  margin-bottom: 15px;
+  font-size: 90%;
+}
+
+#main-footer .widgets-wrapper,
+.share-footer .widgets-wrapper {
+  padding: 0 0 20px;
+}
+
+#main-footer .widgets-wrapper a,
+.share-footer .widgets-wrapper a {
+  color: #d3d3d3;
+}
+
+#main-footer .widgets-wrapper a:hover,
+.share-footer .widgets-wrapper a:hover {
+  color: #c48214;
+}
+
+#main-footer .widgets-wrapper li,
+.share-footer .widgets-wrapper li {
+  margin-bottom: 10px;
+}
+.share-footer .misc-wrapper {
+  padding: 10px 0;
+  margin-bottom: 0;
+  font-family: 'Roboto', sans-serif;
+}
+.divider {
+    height: 30px;
+    clear: both;
+    width: 100%;
+}
+
+.text-shadow {
+    text-shadow: 1px 1px 1px #000;
+}
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+    margin-left: -5px;
+}

@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet"  href="./static/css/style.css">
+	<link rel="stylesheet"  href="./static/css/base-style.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap&subset=cyrillic" rel="stylesheet">
 </head>
 <body>
@@ -39,8 +39,72 @@
     <main class="main">
         {% block content %}{% endblock %}
     </main>
+    <footer class="footer-main">
+        <div class="widgets-wrapper">
+                    <div class="share-footer">
+                <div class="misc-wrapper clearfix">
 
+                    <div class="col-sm-4 text-center">
+                        <a href="" target="_blank" rel="noreferrer noopener" class="inline-block btn-facebook">
+                            <div class="btn btn-default box-cell">
+                                <i class="fa fa-facebook fa-2x fa-fw" style="margin-top: 10px;"></i>
+                            </div>
+                            <div class="btn btn-blank box-cell">
+                                <div class="text-left">
+                                    <span class="text-light">GAMEPRODUCT ON</span> <br>FACEBOOK
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <a href="" rel="noreferrer noopener" target="_blank" class="inline-block btn-twitter">
+                            <div class="btn btn-default box-cell">
+                                <i class="fa fa-twitter fa-2x fa-fw" style="margin-top: 10px;"></i>
+                            </div>
+                            <div class="btn btn-blank box-cell">
+                                <div class="text-left">
+                                    <span class="text-light">GAMEPRODUCT ON</span> <br>TWITTER
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <a href="" rel="noreferrer noopener" target="_blank" class="inline-block btn-youtube">
+                            <div class="btn btn-default box-cell">
+                                <i class="fa fa-youtube fa-2x fa-fw" style="margin-top: 10px;"></i>
+                            </div>
+                            <div class="btn btn-blank box-cell">
+                                <div class="text-left">
+                                    <span class="text-light">GAMEPRODUCT ON</span> <br>YOUTUBE
+                                </div>
+                            </div>
+                        </a>
+                    </div>
 
+                    <div class="footer-bg gradient"></div>
+                </div>
+            </div>
+            <div class="footer-bg gradient"></div>
+        </div>
+        <div class="divider"></div>
+        <div class="text-center">
+            <p class="text-center text-shadow text-small">
+                © 2022 GAMEPRODUCT a.s. GAME® and GAMEPRODUCT® are registered trademarks of GAMEPRODUCT a.s. All rights reserved.
+            </p>
+            <ul class="list-unstyled list-inline text-center">
+                <li>
+                    <a href="">Cookie Policy</a>
+                </li>
+                <li>
+                    <a href="">Terms &amp; Conditions</a>
+                </li>
+                <li>
+                    <a href="">Privacy Policy</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 
+<script src="https://use.fontawesome.com/5534f4b07f.js "></script>
 </body>
 </html>
