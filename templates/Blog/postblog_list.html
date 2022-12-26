@@ -5,7 +5,6 @@ Blog | GameProduct
 {% endblock %}
 
 {% block content %}
-    <link rel="stylesheet"  href="./static/css/blog/blog_posts-style.css">
 <!-- BlogPost start -->
     <section class="blog-post">
             <ul class="blog-post_button_filter">
@@ -42,7 +41,7 @@ Blog | GameProduct
                 </li>
             </ul>
         <div>
-        {% for postblog in postblog %}
+        {% for postblog in postblog_list %}
         <h2>{{ postblog.category }}</h2>
         <img src="{{ postblog.image.url }}" height="500" width="500">
         <p>{{ postblog.create_at }}</p>
