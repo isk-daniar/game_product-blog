@@ -69,7 +69,6 @@ a{
 	margin: 0 auto;
 	min-height: 89px;
 	background-color: #000000;
-	border-radius: 10px;
 }
 .wrapper{
 	padding-top: 29px;
@@ -90,7 +89,6 @@ a{
 	align-items: stretch;
 	justify-content: center;
 	min-height: 89px;
-	border-radius: 10px;
 	transition: background 0.5s;
 }
 .header_item:hover{
