@@ -1,5 +1,6 @@
 from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
+from django.urls import reverse
 
 class Category(MPTTModel):
     name = models.CharField(max_length=100)
@@ -20,7 +21,7 @@ class MPTTMeta:
     order_insertion_by = ['name']
 
 class PostBlog(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=200)
     description = models.CharField(max_length=250)
     category = models.ForeignKey(
         Category,
@@ -31,6 +32,14 @@ class PostBlog(models.Model):
     image = models.ImageField(upload_to='Blog/images/')
     url = models.URLField(blank=True)
     create_at = models.DateTimeField(auto_now_add=True)
+    slug = models.SlugField(max_length=200, default="")
+    textblog = models.TextField(blank=True)
+
+    def get_absolute_url(self):
+        return reverse("postblog_single", kwargs={"slug":self.category.slug, "postblog_slug": self.slug})
+
+    def get_recipes(self):
+        return self.expandpostblog.all()
 
 class ExpandPost(models.Model):
     name = models.CharField(max_length=100)
@@ -47,6 +56,7 @@ class ExpandPost(models.Model):
         on_delete=models.SET_NULL,
         null=True
     )
+    image = models.ImageField(upload_to='Blog/images/', blank=True)
     textblog = models.TextField()
     url = models.URLField(blank=True)
 

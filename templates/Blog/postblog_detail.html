@@ -5,8 +5,7 @@ Blog | GameProduct
 {% endblock %}
 
 {% block content %}
-<!-- BlogPost start -->
-    <section class="blog-post_filter">
+ <section class="blog-post_filter">
             <ul class="blog-post_button_filter">
                 <li class="blog-post_item">
                     <a class="blog-post_link" href="">All post</a>
@@ -40,26 +39,29 @@ Blog | GameProduct
                     <a class="blog-post_link" href="">Reports</a>
                 </li>
             </ul>
-        <div>
-        {% for postblog in postblog_list %}
-        <h2>{{ postblog.category }}</h2>
-        <div >
-            <a href="{{ postblog.get_absolute_url }}">
-            <img src="{{ postblog.image.url }}" height="500" width="500">
-            </a>
-        </div>
-
-        <p>{{ postblog.create_at }}</p>
-        <h2><a href="{{ postblog.get_absolute_url }}">{{ postblog.name }}</a></h2>
-        <p>{{ postblog.description }}</p>
-
-
-        {% if postblog.url %}
-        <br><a href="{{postblog.url}}">Lick</a>
-        {% endif %}
-        <br>
+            <!-- BlogPost start -->
+            <div class="post-blog_main-single">
+        {% for expandpostblog in postblog.get_recipes %}
+                <div class="post-blog_single">
+                    <div class="date-title-category">
+                        <div class="main-postblog_date">
+                            <div class="category">{{ expandpostblog.category }}</div>
+                        </div>
+                        <div class="main-postblog_date">
+                            <div class="create-at">{{ expandpostblog.create_at }}</div>
+                        </div>
+                        <div class="main-postblog_title">
+                            <div class="title-postblog">{{ expandpostblog.name }}</div>
+                        </div>
+                    </div>
+                    <div class="main-textblog">
+                        <div class="textblog">
+                            {{ expandpostblog.textblog }}
+                        </div>
+                    </div>
+                </div>
+            </div>
         {% endfor %}
-        </div>
     </section>
 
 {% endblock %}
