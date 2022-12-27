@@ -1,6 +1,6 @@
 /* blog-post */
 
-.blog-post{
+.blog-post_fiter{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
