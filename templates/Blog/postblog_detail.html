@@ -56,12 +56,12 @@ Blog | GameProduct
                     </div>
                     <div class="main-textblog">
                         <div class="textblog">
-                            {{ expandpostblog.textblog }}
+                            {{ expandpostblog.textblog|safe }}
                         </div>
                     </div>
                 </div>
             </div>
         {% endfor %}
-    </section>
+ </section>
 
 {% endblock %}

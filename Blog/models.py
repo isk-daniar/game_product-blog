@@ -1,3 +1,4 @@
+from  ckeditor.fields import RichTextField
 from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
 from django.urls import reverse
@@ -57,7 +58,7 @@ class ExpandPost(models.Model):
         null=True
     )
     image = models.ImageField(upload_to='Blog/images/', blank=True)
-    textblog = models.TextField()
+    textblog = RichTextField()
     url = models.URLField(blank=True)
 
 class RecentPosts(models.Model):
