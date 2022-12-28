@@ -4,6 +4,11 @@ from django.views.generic import ListView, DetailView
 from .models import PostBlog
 
 
+class HomeView(ListView):
+    model = PostBlog
+    paginate_by = 5
+    template_name = "blog/home.html"
+
 class  PostListView(ListView):
     model = PostBlog
 
@@ -15,5 +20,4 @@ class PostDetailView(DetailView):
     context_object_name = "postblog"
     slug_url_kwarg = 'postblog_slug'
 
-def home(request):
-    return render(request, '../templates/base.html')
+

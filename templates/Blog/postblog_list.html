@@ -9,23 +9,23 @@ Blog | GameProduct
     <section class="blog-post_filter">
             <ul class="blog-post_button_filter">
                 <li class="blog-post_item">
-                    <a class="blog-post_link" href="">All post</a>
+                    <a class="blog-post_link" href="http://127.0.0.1:8000/">All post</a>
                 </li>
 
                 <li class="blog-post_item">
-                    <a class="blog-post_link" href="">Release</a>
+                    <a class="blog-post_link" href="http://127.0.0.1:8000/release/">Release</a>
                 </li>
 
                 <li class="blog-post_item">
-                    <a class="blog-post_link" href="">Community Highlights</a>
+                    <a class="blog-post_link" href="http://127.0.0.1:8000/community_highlights/">Community Highlights</a>
                 </li>
 
                 <li class="blog-post_item">
-                    <a class="blog-post_link" href="">Devblog</a>
+                    <a class="blog-post_link" href="http://127.0.0.1:8000/devblog/">Devblog</a>
                 </li>
 
                 <li class="blog-post_item">
-                    <a class="blog-post_link" href="">News</a>
+                    <a class="blog-post_link" href="http://127.0.0.1:8000/news/">News</a>
                 </li>
 
                 <li class="blog-post_item">
@@ -33,11 +33,11 @@ Blog | GameProduct
                 </li>
 
                 <li class="blog-post_item">
-                    <a class="blog-post_link" href="">LiveStream</a>
+                    <a class="blog-post_link" href="http://127.0.0.1:8000/news/">LiveStream</a>
                 </li>
 
                 <li class="blog-post_item">
-                    <a class="blog-post_link" href="">Reports</a>
+                    <a class="blog-post_link" href="http://127.0.0.1:8000/news/">Reports</a>
                 </li>
             </ul>
         <div>
@@ -49,7 +49,7 @@ Blog | GameProduct
             </a>
         </div>
 
-        <p>{{ postblog.create_at }}</p>
+        <p>{{ postblog.create_at|date:"M d, Y" }}</p>
         <h2><a href="{{ postblog.get_absolute_url }}">{{ postblog.name }}</a></h2>
         <p>{{ postblog.description }}</p>
 
