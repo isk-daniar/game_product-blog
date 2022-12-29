@@ -44,8 +44,10 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 	background-image: url(/media/background-image/background_imag-icon-2.jpg);
+	text-decoration: none;
 }
 a{
+    text-decoration: none;
     outline: 0;
     color: #fff;
     transition: all 0.5s;

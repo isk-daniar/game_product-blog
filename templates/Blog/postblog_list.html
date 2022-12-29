@@ -5,6 +5,8 @@ Blog | GameProduct
 {% endblock %}
 
 {% block content %}
+
+
 <!-- BlogPost start -->
     <section class="blog-post_filter">
             <ul class="blog-post_button_filter">
@@ -29,18 +31,20 @@ Blog | GameProduct
                 </li>
 
                 <li class="blog-post_item">
-                    <a class="blog-post_link" href="">More</a>
-                </li>
-
-                <li class="blog-post_item">
-                    <a class="blog-post_link" href="http://127.0.0.1:8000/news/">LiveStream</a>
-                </li>
-
-                <li class="blog-post_item">
-                    <a class="blog-post_link" href="http://127.0.0.1:8000/news/">Reports</a>
+                    <div class="dropdown">
+                      <button class="btn dropdown-toggle blog-post_link " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        More
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="blog-def blog-more-link" href="http://127.0.0.1:8000/livestream/">LiveStream</a></li>
+                        <li><a class="blog-def blog-more-link" href="http://127.0.0.1:8000/reports/">Reports</a></li>
+                      </ul>
+                    </div>
                 </li>
             </ul>
-        <div>
+    </section>
+    <section class="post-blog-list-main">
+        <div class="post-blog"
         {% for postblog in postblog_list %}
         <h2>{{ postblog.category }}</h2>
         <div >
@@ -59,7 +63,7 @@ Blog | GameProduct
         {% endif %}
         <br>
         {% endfor %}
-        </div>
     </section>
+
 
 {% endblock %}
