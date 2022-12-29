@@ -5,63 +5,64 @@ Blog | GameProduct
 {% endblock %}
 
 {% block content %}
- <section class="blog-post_filter">
-            <ul class="blog-post_button_filter">
-                <li class="blog-post_item">
-                    <a class="blog-post_link" href="">All post</a>
-                </li>
+     <section class="blog-post_filter">
+                <ul class="blog-post_button_filter">
+                    <li class="blog-post_item">
+                        <a class="blog-post_link" href="http://127.0.0.1:8000/">All post</a>
+                    </li>
 
-                <li class="blog-post_item">
-                    <a class="blog-post_link" href="">Release</a>
-                </li>
+                    <li class="blog-post_item">
+                        <a class="blog-post_link" href="http://127.0.0.1:8000/release/">Release</a>
+                    </li>
 
-                <li class="blog-post_item">
-                    <a class="blog-post_link" href="">Community Highlights</a>
-                </li>
+                    <li class="blog-post_item">
+                        <a class="blog-post_link" href="http://127.0.0.1:8000/community_highlights">Community Highlights</a>
+                    </li>
 
-                <li class="blog-post_item">
-                    <a class="blog-post_link" href="">Devblog</a>
-                </li>
+                    <li class="blog-post_item">
+                        <a class="blog-post_link" href="http://127.0.0.1:8000/devblog/">Devblog</a>
+                    </li>
 
-                <li class="blog-post_item">
-                    <a class="blog-post_link" href="">News</a>
-                </li>
+                    <li class="blog-post_item">
+                        <a class="blog-post_link" href="http://127.0.0.1:8000/news/">News</a>
+                    </li>
 
-                <li class="blog-post_item">
-                    <a class="blog-post_link" href="">More</a>
-                </li>
-
-                <li class="blog-post_item">
-                    <a class="blog-post_link" href="">LiveStream</a>
-                </li>
-
-                <li class="blog-post_item">
-                    <a class="blog-post_link" href="">Reports</a>
-                </li>
-            </ul>
-            <!-- BlogPost start -->
-            <div class="post-blog_main-single">
+                    <li class="blog-post_item">
+                        <div class="dropdown">
+                          <button class="btn dropdown-toggle blog-post_link " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="blog-def blog-more-link" href="http://127.0.0.1:8000/livestream/">LiveStream</a></li>
+                            <li><a class="blog-def blog-more-link" href="http://127.0.0.1:8000/reports/">Reports</a></li>
+                          </ul>
+                        </div>
+                    </li>
+                </ul>
+     </section>
+    <!-- BlogPost start -->
+    <section class="post-blog-list-main">
         {% for expandpostblog in postblog.get_recipes %}
-                <div class="post-blog_single">
-                    <div class="date-title-category">
+        <div class="post-blog_single">
+                <div class="date-title-category">
                         <div class="main-postblog_date">
                             <div class="category">{{ expandpostblog.category }}</div>
                         </div>
+                        <br>
                         <div class="main-postblog_date">
                             <div class="create-at">{{ expandpostblog.create_at }}</div>
                         </div>
                         <div class="main-postblog_title">
                             <div class="title-postblog">{{ expandpostblog.name }}</div>
                         </div>
-                    </div>
-                    <div class="main-textblog">
-                        <div class="textblog">
-                            {{ expandpostblog.textblog|safe }}
+                        <div class="main-textblog">
+                            <div class="textblog">
+                                {{ expandpostblog.textblog|safe }}
+                            </div>
                         </div>
-                    </div>
                 </div>
-            </div>
-        {% endfor %}
- </section>
+        </div>
+            {% endfor %}
+        </section>s
 
 {% endblock %}
