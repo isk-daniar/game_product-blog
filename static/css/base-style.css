@@ -43,7 +43,9 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	background-image: url(/media/background-image/background_imag-icon-2.jpg);
+	background-attachment: fixed;
+	background-image: url(/media/background-image/background_imag-icon-3.jpg);
+	background-repeat: no-repeat;
 	text-decoration: none;
 }
 a{
@@ -58,7 +60,9 @@ a{
 .main_intro_bg-color{
 	background-color: #e0e0e0;
 }
-
+img {
+    vertical-align: middle;
+}
 /* header */
 
 .header{
@@ -147,6 +151,8 @@ a{
     position: relative;
     white-space: normal;
     transition: color 0.5s, opacity 0.5s, border-color 0.5s, background-color 0.5s;
+    border-radius: 0;
+    color: #fff;
 }
 .box-cell {
     display: table-cell !important;
