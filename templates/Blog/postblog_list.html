@@ -43,27 +43,78 @@ Blog | GameProduct
                 </li>
             </ul>
     </section>
-    <section class="post-blog-list-main">
-        <div class="post-blog"
+    <section class="main_blog-post-content">
         {% for postblog in postblog_list %}
-        <h2>{{ postblog.category }}</h2>
-        <div >
-            <a href="{{ postblog.get_absolute_url }}">
-            <img src="{{ postblog.image.url }}" height="500" width="500">
-            </a>
-        </div>
+            {% if forloop.first %}
+                <div class="post-blog_content">
+                    <article class="col-xs-12 post-preview">
+                        <div class="col-sm-3 post-wrapper">
+                            <a href="{{ postblog.get_absolute_url }}">
+                                <img class="img-post box-shadow" src="{{ postblog.image.url }}" >
+                            </a>
+                        </div>
+                        <div class="col-sm-9">
+                            <header>
+                                <h1 class="text-medium">
+                                    <a href="{{ postblog.get_absolute_url }}">
+                                        <span class="">{{ postblog.category }}</span>
+                                    </a>
+                                </h1>
+                                <h2 class="text-medium">
+                                    <a href="{{ postblog.get_absolute_url }}">
+                                        <span>{{ postblog.name }}</span>
+                                    </a>
+                                </h2>
+                            </header>
+                            <div class="post-excerpt">
+                                <p>
+                                    {{ postblog.description }}
+                                </p>
+                            </div>
+                            <footer class="text-muted">
+                                <time datetime="">{{ postblog.create_at|date:"M d, Y" }}</time>
+                            </footer>
+                        </div>
+                    </article>
+                </div>
+            {% endif %}
+        {% endfor %}
 
-        <p>{{ postblog.create_at|date:"M d, Y" }}</p>
-        <h2><a href="{{ postblog.get_absolute_url }}">{{ postblog.name }}</a></h2>
-        <p>{{ postblog.description }}</p>
-
-
-        {% if postblog.url %}
-        <br><a href="{{postblog.url}}">Lick</a>
-        {% endif %}
-        <br>
+        {% for postblog in postblog_list %}
+            {% if forloop.first <= 5 and forloop.counter > 1 %}
+                <div class="post-blog_content">
+                    <article class="col-xs-12 post-preview">
+                        <div class="col-sm-3 post-wrapper">
+                            <a href="{{ postblog.get_absolute_url }}">
+                                <img class="img-post box-shadow" src="{{ postblog.image.url }}" >
+                            </a>
+                        </div>
+                        <div class="col-sm-9">
+                            <header>
+                                <h1 class="text-medium">
+                                    <a href="{{ postblog.get_absolute_url }}">
+                                        <span class="">{{ postblog.category }}</span>
+                                    </a>
+                                </h1>
+                                <h2 class="text-medium">
+                                    <a href="{{ postblog.get_absolute_url }}">
+                                        <span>{{ postblog.name }}</span>
+                                    </a>
+                                </h2>
+                            </header>
+                            <div class="post-excerpt">
+                                <p>
+                                    {{ postblog.description }}
+                                </p>
+                            </div>
+                            <footer class="text-muted">
+                                <time datetime="">{{ postblog.create_at|date:"M d, Y" }}</time>
+                            </footer>
+                        </div>
+                    </article>
+                </div>
+            {% endif %}
         {% endfor %}
     </section>
-
 
 {% endblock %}
