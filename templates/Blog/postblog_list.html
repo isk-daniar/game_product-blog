@@ -29,7 +29,6 @@ Blog | GameProduct
                 <li class="blog-post_item">
                     <a class="blog-post_link" href="http://127.0.0.1:8000/news/">News</a>
                 </li>
-
                 <li class="blog-post_item">
                     <div class="dropdown">
                       <button class="btn dropdown-toggle blog-post_link " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -53,13 +52,15 @@ Blog | GameProduct
                                 <img class="img-post box-shadow" src="{{ postblog.image.url }}" >
                             </a>
                         </div>
-                        <div class="col-sm-9">
+                        <div class="col-sm-9 box-black">
                             <header>
+                                <br>
                                 <h1 class="text-medium">
                                     <a href="{{ postblog.get_absolute_url }}">
                                         <span class="">{{ postblog.category }}</span>
                                     </a>
                                 </h1>
+                                <br>
                                 <h2 class="text-medium">
                                     <a href="{{ postblog.get_absolute_url }}">
                                         <span>{{ postblog.name }}</span>
@@ -89,13 +90,15 @@ Blog | GameProduct
                                 <img class="img-post box-shadow" src="{{ postblog.image.url }}" >
                             </a>
                         </div>
-                        <div class="col-sm-9">
+                        <div class="col-sm-9 box-black">
                             <header>
+                                <br>
                                 <h1 class="text-medium">
                                     <a href="{{ postblog.get_absolute_url }}">
                                         <span class="">{{ postblog.category }}</span>
                                     </a>
                                 </h1>
+                                <br>
                                 <h2 class="text-medium">
                                     <a href="{{ postblog.get_absolute_url }}">
                                         <span>{{ postblog.name }}</span>
