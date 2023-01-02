@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'mptt',
     'ckeditor',
     
-    'About',
+    'Game',
     'Blog',
     'Community',
     'Medias',
