@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'Community',
     'Medias',
     'Purchase',
-    'Support',
+    'gp_users',
 ]
 
 MIDDLEWARE = [
