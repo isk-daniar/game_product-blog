@@ -1,10 +1,31 @@
-from django.shortcuts import render
-from .models import GPUserConf
-from .serializers import GPUserSerializer
+from django.contrib.auth.models import User
 from rest_framework import generics
-from rest_framework.permissions import IsAdminUser
+from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated, AllowAny
 
-class GPUserList(generics.ListAPIView):
-    queryset = GPUserConf.objects.all()
+from .permissions import IsAdminOrReadOnly, IsOwnerOrReadOnly
+from .serializers import GPUserSerializer, RegisterSerializer
+from Blog.models import PostBlog
+
+
+class RegisterView(generics.CreateAPIView):
+    queryset = User.objects.all()
+    permission_classes = (AllowAny, )
+    serializer_class = RegisterSerializer
+
+
+class GPAPIList(generics.ListCreateAPIView):
+    queryset = PostBlog.objects.all()
     serializer_class = GPUserSerializer
-    permission_classes = [IsAdminUser]
+    permission_classes = (IsAuthenticatedOrReadOnly, )
+
+
+class GPAPIUpdate(generics.RetrieveUpdateAPIView):
+    queryset = PostBlog.objects.all()
+    serializer_class = GPUserSerializer
+    permission_classes = (IsAuthenticated, )
+
+class GPAPIDestaroy(generics.RetrieveDestroyAPIView):
+    queryset = PostBlog.objects.all()
+    serializer_class = GPUserSerializer
+    permission_classes = (IsAdminOrReadOnly, )
+

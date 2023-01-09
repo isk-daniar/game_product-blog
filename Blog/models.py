@@ -2,6 +2,7 @@ from  ckeditor.fields import RichTextField
 from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
 from django.urls import reverse
+from django.contrib.auth.models import User
 
 class Category(MPTTModel):
     name = models.CharField(max_length=100)
@@ -31,10 +32,9 @@ class PostBlog(models.Model):
         null=True
     )
     image = models.ImageField(upload_to='Blog/images/')
-    url = models.URLField(blank=True)
     create_at = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(max_length=200, default="")
-    textblog = models.TextField(blank=True)
+    user = models.ForeignKey(User, verbose_name='Users', on_delete=models.CASCADE)
 
     def get_absolute_url(self):
         return reverse("postblog_single", kwargs={"slug":self.category.slug, "postblog_slug": self.slug})
@@ -59,7 +59,7 @@ class ExpandPost(models.Model):
     )
     image = models.ImageField(upload_to='Blog/images/', blank=True)
     textblog = RichTextField()
-    url = models.URLField(blank=True)
+    user = models.ForeignKey(User, verbose_name='Users', on_delete=models.CASCADE)
 
 class RecentPosts(models.Model):
     name = models.CharField(max_length=100)
