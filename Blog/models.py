@@ -42,15 +42,12 @@ class PostBlog(models.Model):
     def get_recipes(self):
         return self.expandpostblog.all()
 
+    def __str__(self):
+        return self.name
+
 class ExpandPost(models.Model):
     name = models.CharField(max_length=100)
     create_at = models.DateTimeField(auto_now_add=True)
-    category = models.ForeignKey(
-        Category,
-        related_name="expandpost",
-        on_delete=models.SET_NULL,
-        null=True
-    )
     postblog = models.ForeignKey(
         PostBlog,
         related_name="expandpostblog",
@@ -60,6 +57,9 @@ class ExpandPost(models.Model):
     image = models.ImageField(upload_to='Blog/images/', blank=True)
     textblog = RichTextField()
     user = models.ForeignKey(User, verbose_name='Users', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
 
 class RecentPosts(models.Model):
     name = models.CharField(max_length=100)
