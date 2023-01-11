@@ -14,7 +14,7 @@ class PostAdmin(admin.ModelAdmin):
 
 @admin.register(models.ExpandPost)
 class ExpandPostAdmin(admin.ModelAdmin):
-    list_display = ["name", "category", "create_at"]
+    list_display = ["name", "create_at"]
 
 
 
