@@ -3,20 +3,31 @@ from django.contrib.auth.models import User
 from rest_framework.validators import UniqueValidator
 from django.contrib.auth.password_validation import validate_password
 
-
 from Blog.models import PostBlog, ExpandPost
 
 
-class GPUserSerializer(serializers.ModelSerializer):
+class GPSerializerPostBlog(serializers.ModelSerializer):
     user = serializers.HiddenField(default=serializers.CurrentUserDefault())
 
     class Meta:
         model = PostBlog
         fields = ('__all__')
 
-    class Meta2:
+class GPSerializerExpandPost(serializers.ModelSerializer):
+    user = serializers.HiddenField(default=serializers.CurrentUserDefault())
+
+    class Meta:
         model = ExpandPost
         fields = ('__all__')
+
+    def to_representation(self, instance):
+        rep = super(GPSerializerExpandPost, self).to_representation(instance)
+        rep['postblog'] = instance.postblog.name
+        return rep
+
+
+
+
 
 
 class RegisterSerializer(serializers.ModelSerializer):
@@ -30,11 +41,8 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('username', 'password', 'password2', 'email', 'first_name', 'last_name')
-        extra_kwargs = {
-            'first_name': {'required': True},
-            'last_name': {'required': True}
-        }
+        fields = ('username', 'email', 'password', 'password2')
+
 
     def validate(self, attrs):
         if attrs['password'] != attrs['password2']:
@@ -46,8 +54,6 @@ class RegisterSerializer(serializers.ModelSerializer):
         user = User.objects.create(
             username=validated_data['username'],
             email=validated_data['email'],
-            first_name=validated_data['first_name'],
-            last_name=validated_data['last_name']
         )
 
         user.set_password(validated_data['password'])
