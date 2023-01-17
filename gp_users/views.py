@@ -9,12 +9,12 @@ from .serializers import GPSerializerPostBlog, RegisterSerializer, GPSerializerE
 from Blog.models import PostBlog, ExpandPost
 
 
+
 class RegisterView(generics.CreateAPIView):
     renderer_classes = [TemplateHTMLRenderer]
     permission_classes = (AllowAny, )
     serializer_class = RegisterSerializer
-    template_name = "gp_users/profile_detail.html"
-    context_object_name = "register_view"
+    template_name = "gp_users/register_users-gp.html"
 
     def get(self, request):
         queryset = User.objects.all()

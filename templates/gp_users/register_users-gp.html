@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GameProduct Account</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/css/gp_users/qusers_auth_style.css">
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap&subset=cyrillic" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section class="content-center greyframe">
+            <div class="vfg-grid view-wrapper">
+                <header>
+                    <a class="" href="">
+                        <img src="/media/logo/auth-log.png">
+                    </a>
+                    <div class="divider"></div>
+                </header>
+                <div>
+                    <section class="saction-wrapper whiteframe shadowframe">
+                        <h1 class="headline">Create new Account</h1>
+                        <div class="">
+                            <button  class="signInButton steamButton">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path  d="M9.406 17.183c.431-1.025-.05-2.206-1.076-2.637l-1.762-.741c.331-.125.654-.182.982-.183 1.518 0 2.765 1.236 2.779 2.754.014 1.538-1.217 2.792-2.753 2.806-1.159.005-2.138-.684-2.571-1.665l1.763.741c1.027.432 2.207-.05 2.638-1.075zm9.594-17.183h-14c-2.761 0-5 2.239-5 5v6.043l5.585 2.349c.596-.39 1.283-.599 2.046-.583l3.017-4.221c.048-2.541 2.122-4.588 4.674-4.588 2.582 0 4.678 2.094 4.678 4.677 0 2.581-2.098 4.703-4.732 4.675l-4.115 3.067-.009.004c-.012 1.962-1.593 3.558-3.561 3.577-1.777.015-3.234-1.249-3.56-2.895l-4.023-1.692v3.587c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-3.678 11.857c-1.752 0-3.179-1.427-3.179-3.18 0-1.753 1.427-3.179 3.179-3.179 1.754 0 3.179 1.426 3.179 3.179s-1.425 3.18-3.179 3.18zm0-.779c1.325 0 2.4-1.077 2.4-2.401 0-1.323-1.075-2.401-2.4-2.401-1.324 0-2.401 1.078-2.401 2.401 0 1.324 1.077 2.401 2.401 2.401z"></path>
+                                </svg>
+                                <div class="buttonText">Sign in with Steam</div>
+                            </button>
+                            <button class="signInButton fbButton">
+                                <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path  fill="#fff" d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path>
+                                </svg>
+                                <div class="buttonText">Sign in with Facebook</div>
+                            </button>
+                            <button  class="signInButton googleButton">
+                                <svg width="24" height="24" viewBox="0 0 16 16" fill="none">
+                                    <path d="M3.75 7.99998C3.75 7.20717 3.96844 6.46467 4.34781 5.82873V3.13155H1.65062C0.580312 4.52186 0 6.21623 0 7.99998C0 9.78373 0.580312 11.4781 1.65062 12.8684H4.34781V10.1712C3.96844 9.5353 3.75 8.7928 3.75 7.99998Z" fill="#FBBD00"></path>
+                                    <path d="M8 12.25L6.125 14.125L8 16C9.78375 16 11.4781 15.4197 12.8684 14.3494V11.655H10.1741C9.5325 12.036 8.78688 12.25 8 12.25Z" fill="#0F9D58"></path>
+                                    <path d="M4.34758 10.1713L1.65039 12.8685C1.86227 13.1438 2.0932 13.4072 2.34289 13.6569C3.85383 15.1678 5.86289 16 7.99977 16V12.25C6.44914 12.25 5.08977 11.415 4.34758 10.1713Z" fill="#31AA52"></path>
+                                    <path d="M16 8C16 7.51344 15.9559 7.02563 15.8691 6.55063L15.7987 6.16625H8V9.91625H11.7953C11.4269 10.6494 10.86 11.2475 10.1741 11.655L12.8684 14.3494C13.1438 14.1375 13.4072 13.9066 13.6569 13.6569C15.1678 12.1459 16 10.1369 16 8Z" fill="#3C79E6"></path>
+                                    <path d="M11.0053 4.99469L11.3369 5.32625L13.9884 2.67469L13.6569 2.34313C12.1459 0.832188 10.1369 0 8 0L6.125 1.875L8 3.75C9.13531 3.75 10.2025 4.19219 11.0053 4.99469Z" fill="#CF2D48"></path>
+                                    <path d="M7.99977 3.75V0C5.86289 0 3.85383 0.832188 2.34289 2.34313C2.0932 2.59281 1.86227 2.85656 1.65039 3.13188L4.34758 5.82906C5.08977 4.585 6.44914 3.75 7.99977 3.75Z" fill="#EB4132"></path>
+                                </svg>
+                                <div class="buttonText">Sign in with Google</div>
+                            </button>
+                        </div>
+                        <div class="divider-or">
+                            <span>
+                                OR
+                            </span>
+                        </div>
+                        <section>
+                            <div class="">
+                                <form action="/api/v1/register/" method="POST" enctype="multipart/form-data" novalidate="">
+                                    <div  class="field-wrapper">
+                                        <input type="hidden" name="csrfmiddlewaretoken" value="lEEmuDcA5Z9ZbQwatQjYOYXAgGRZ8us7gUICBF2rXGqHaCtVMXu1jmfOwQD6s4SE">
+                                        <div class="">
+                                            <div class="">
+                                                <input name="username" placeholder="Nickname" class="form-control" type="text" value="">
+                                            </div>
+                                        </div>
+                                        <div class="errors-wrapper">
+                                            <div class="errors">
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field-wrapper">
+                                        <input name="email" placeholder="E-mail" class="form-control" type="email" value="">
+                                        <div class="errors-wrapper">
+                                            <div class="errors">
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field-wrapper">
+                                        <div class="wrapper">
+                                            <div class="Password__group">
+                                                <input name="password" placeholder="Password" class="form-control" type="text" value="">
+                                            </div>
+                                            <div class="Password__strength-meter">
+                                                <div class="Password__strength-meter--fill" data-srore="1"></div>
+                                            </div>
+                                        </div>
+                                        <div class="errors-wrapper">
+                                            <div class="errors">
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field-wrapper">
+                                        <input name="password2" placeholder="Password Confirmation" class="form-control" type="text" value="">
+                                        <div class="errors-wrapper">
+                                            <div class="errors">
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field-wrapper">
+                                        <div class="consent">
+                                            <div class="form-check form-switch">
+                                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                              <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                                            </div>
+                                            <div class="consentText">By creating a GameProduct Account,<br>you accept the <a href="" class="" target="" >User Agreement</a>
+                                                &amp;<a href="" target=""> Privacy Policy</a>.
+                                            </div>
+                                        </div>
+                                        <div class="errors-wrapper">
+                                            <div class="errors"></div>
+                                        </div>
+                                    </div>
+                                        <button class="button-content">
+                                            <span class="">SIGN UP</span>
+                                            <div class="" style="display: none;">
+                                                <div class="" style="height: 0.9em; width: 0.9em; border-width: 2px; border-style: solid; border-color: rgb(255, 255, 255) rgb(255, 255, 255) transparent; border-radius: 100%; background: transparent;"></div>
+                                            </div>
+                                        </button>
+                                </form>
+
+                                <footer>
+                                    <div class="divider-or-1" style="height: 1em;"></div>
+                                    <div class="g-recaptcha" data-sitekey="6Ld2sf4SAAAAAKSgzs0Q13IZhY02Pyo31S2jgOB5">
+                                        <div class="re_center re-ce">
+                                            <div >
+                                                <iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Ld2sf4SAAAAAKSgzs0Q13IZhY02Pyo31S2jgOB5&amp;co=aHR0cHM6Ly9wYXRyaWNraGxhdWtlLmdpdGh1Yi5pbzo0NDM.&amp;hl=en&amp;v=5qcenVbrhOy8zihcc2aHOWD4&amp;size=normal&amp;cb=7c0zxx27y6w0" width="304" height="78" role="presentation" name="a-fo2ruh13wg5b" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+                                            </div>
+                                            <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                                        </div>
+                                        <iframe style="display: none;"></iframe>
+                                    </div>
+                                </footer>
+                            </div>
+                        </section>
+                    </section>
+                    <div class="divider-or">
+                        <span>
+                            <button type="button" class="button-content button-bg"  style="font-size: 0.8em;">
+                                <span style="color: #fff;"">ALREADY HAVE AN ACCOUNT?</span>
+                                <div class="v-spinner loader" style="display: none;">
+                                    <div class="v-clip" style="height: 0.9em; width: 0.9em; border-width: 2px; border-style: solid; border-color: rgb(255, 255, 255) rgb(255, 255, 255) transparent; border-radius: 100%; background: transparent;"></div>
+                                </div>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="/static/js/base.js"></script>
+<script src="/static/bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>
+<script src="https://use.fontawesome.com/5534f4b07f.js "></script>
+</html>
