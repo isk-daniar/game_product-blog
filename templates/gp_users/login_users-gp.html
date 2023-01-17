@@ -1,6 +1,7 @@
-
+{% load rest_framework %}
 <!DOCTYPE html>
 <html lang="en">
+<head>
 <head>
     <meta charset="UTF-8">
     <title>GameProduct Account</title>
@@ -26,7 +27,7 @@
                 </header>
                 <div>
                     <section class="saction-wrapper whiteframe shadowframe">
-                        <h1 class="headline">Create new Account</h1>
+                        <h1 class="headline">Sign in to your Account</h1>
                         <div class="">
                             <button  class="signInButton steamButton">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -59,26 +60,16 @@
                         </div>
                         <section>
                             <div class="">
-                                <form action="/api/v1/register/" method="POST" enctype="multipart/form-data" novalidate="">
+                                <form action="{% url 'game_product:auth_login' %}" role="form" method="post">
+                                    {% csrf_token %}
+                                        <input type="hidden" name="next" value="{{ next }}" />
                                     <div  class="field-wrapper">
-                                        <input type="hidden" name="csrfmiddlewaretoken" value="lEEmuDcA5Z9ZbQwatQjYOYXAgGRZ8us7gUICBF2rXGqHaCtVMXu1jmfOwQD6s4SE">
                                         <div class="">
-                                            <div class="">
+                                            <div>
                                                 <input name="username" placeholder="Nickname" class="form-control" type="text" value="">
                                             </div>
                                         </div>
                                         <div class="errors-wrapper">
-                                            <div class="errors">
-                                                <div></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="field-wrapper">
-                                        <input name="email" placeholder="E-mail" class="form-control" type="email" value="">
-                                        <div class="errors-wrapper">
-                                            <div class="errors">
-                                                <div></div>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="field-wrapper">
@@ -86,22 +77,8 @@
                                             <div class="Password__group">
                                                 <input name="password" placeholder="Password" class="form-control" type="text" value="">
                                             </div>
-                                            <div class="Password__strength-meter">
-                                                <div class="Password__strength-meter--fill" data-srore="1"></div>
-                                            </div>
                                         </div>
                                         <div class="errors-wrapper">
-                                            <div class="errors">
-                                                <div></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="field-wrapper">
-                                        <input name="password2" placeholder="Password Confirmation" class="form-control" type="text" value="">
-                                        <div class="errors-wrapper">
-                                            <div class="errors">
-                                                <div></div>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="field-wrapper">
@@ -110,20 +87,15 @@
                                               <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                                               <label class="form-check-label" for="flexSwitchCheckDefault"></label>
                                             </div>
-                                            <div class="consentText">By creating a GameProduct Account,<br>you accept the<a href="" class="" target="" >User Agreement</a>
-                                                &amp;<a href="" target="">Privacy Policy</a>.
+                                            <div class="consentText">By creating a GameProduct Account,<br>you accept the <a href="" class="" target="" >User Agreement</a>
+                                                &amp;<a href="" target=""> Privacy Policy</a>.
                                             </div>
                                         </div>
                                         <div class="errors-wrapper">
                                             <div class="errors"></div>
                                         </div>
                                     </div>
-                                        <button class="button-content">
-                                            <span class="">SIGN UP</span>
-                                            <div class="" style="display: none;">
-                                                <div class="" style="height: 0.9em; width: 0.9em; border-width: 2px; border-style: solid; border-color: rgb(255, 255, 255) rgb(255, 255, 255) transparent; border-radius: 100%; background: transparent;"></div>
-                                            </div>
-                                        </button>
+                                        <input type="submit" name="submit" value="Log in" class="button-content">
                                 </form>
 
                                 <footer>
@@ -161,3 +133,18 @@
 <script src="/static/bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>
 <script src="https://use.fontawesome.com/5534f4b07f.js "></script>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
