@@ -162,7 +162,6 @@ background-color: rgba(0,0,0,0.5);
     border-left: 1px solid hsla(0,0%,100%,.14);
     vertical-align: middle;
 }
-}
 .gp-header-dropdown-menu{
     border-top: 2px solid #6ba539;
     position: absolute;
@@ -195,7 +194,6 @@ background-color: rgba(0,0,0,0.5);
     outline: 0;
     transition: background .5s,color .5s;
 }
-
 /* header-menu */
 
 .header-menu{
