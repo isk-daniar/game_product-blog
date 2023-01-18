@@ -1,0 +1,89 @@
+.post-blog-detail-main{
+    position: relative;
+}
+.container{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1170px;
+}
+.page-header{
+    text-align: center;
+    position: relative;
+    height: 400px;
+    width: 100%;
+    border: 0;
+    padding: 20px;
+    z-index: 0;
+    margin: 40px 0 20px;
+}
+.page-title{
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+    margin: 0.67em 0;
+}
+.page-bg{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+.page-t{
+    position: relative;
+    transition: color 0.5s, opacity 0.5s, border-color 0.5s, background-color 0.5s;
+}
+.text-medium{
+display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    line-height: 1.428571429;
+    border-radius: 0px;
+    user-select: none;
+    font-size: 120%;
+}
+.text-small {
+    font-size: 100%;
+}
+.text-shadow {
+    text-shadow: 1px 1px 1px #000;
+}
+.text-highlight{
+    color: #c48214;
+}
+.page-header .page-header-bg {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: auto;
+    left: -1000px;
+    right: -1000px;
+    height: 100%;
+    border: 1px solid #333;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    box-shadow: 0 0 5px #000;
+}
+.tile {
+    position: relative;
+    margin-bottom: 30px;
+}
+.box-black {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+element.style {
+}
+.post-content {
+    padding: 15px;
+    font-weight: 300;
+    overflow: hidden;
+}

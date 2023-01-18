@@ -1,3 +1,5 @@
+var addthis_config={data_track_addressbar:!0};
+
 $(window).scroll(function() {
     if ($(this).scrollTop() > 500) {
         $('.go-top').addClass('show')
@@ -37,110 +39,23 @@ $(window).scroll(function() {
     })
 })
 
-(function($, window) {
-    $.fn.center = function() {
+var t2 = new SplitText('.txt2').chars,
+    color2 = '#17c0fd',
+    color1 = '#fff',
+    moveBar = ()=>{ gsap.set('.bar', {left:gsap.getProperty('.txt1','width') + 1}) };
 
-        return this.each(function() {
-            // Store the jQuery object for future reference
-            var element = $(this)
+gsap.timeline({delay:0.2})
+    .set('.txt1',   {color:color1, fontWeight:'regular'})
+    .set('.txt2',   {color:color2, fontWeight:'bold', opacity:0, x:gsap.getProperty('.txt1','width')-2, immediateRender:true})
+    .set('.bar',    {left:1, backgroundColor:color1, immediateRender:true})
 
-            var parent = element.data('parent')
-
-            function center() {
-                element.css('position', 'absolute')
-                element.css('top', Math.max(0, (($(parent).height() - $(element).outerHeight()) / 2) +
-                        $(parent).scrollTop()) + 'px')
-                element.css('left', Math.max(0, (($(parent).width() - $(element).outerWidth()) / 2) +
-                        $(parent).scrollLeft()) + 'px')
-            }
-
-            center()
-
-            $(window).resize(function() {
-                center()
-            })
-
-            return element
-        })
-
-    }
-
-    // outside the scope of the jQuery plugin to
-    // keep track of all dropdowns
-    var $allDropdowns = $()
-
-    // if instantlyCloseOthers is true, then it will instantly
-    // shut other nav items when a new one is hovered over
-    $.fn.dropdownHover = function(options) {
-
-        // the element we really care about
-        // is the dropdown-toggle's parent
-        $allDropdowns = $allDropdowns.add(this.parent())
-
-        return this.each(function() {
-            var $this = $(this),
-                $parent = $this.parent(),
-                defaults = {
-                    delay: 500,
-                    instantlyCloseOthers: true,
-                },
-                data = {
-                    delay: $(this).data('delay'),
-                    instantlyCloseOthers: $(this).data('close-others'),
-                },
-                settings = $.extend(true, {}, defaults, options, data),
-                timeout
-
-            $parent.hover(function(event) {
-
-                // so a neighbor can't open the dropdown
-                if (!$parent.hasClass('open') && !$this.is(event.target)) {
-                    return true
-                }
-
-                if (settings.instantlyCloseOthers === true) {
-                    $allDropdowns.removeClass('open')
-                }
-
-                window.clearTimeout(timeout)
-                $parent.addClass('open')
-            }, function() {
-                timeout = window.setTimeout(function() {
-                    $parent.removeClass('open')
-                }, settings.delay)
-            })
-
-            // this helps with button groups!
-            $this.hover(function() {
-                if (settings.instantlyCloseOthers === true) {
-                    $allDropdowns.removeClass('open')
-                }
-
-                window.clearTimeout(timeout)
-                $parent.addClass('open')
-            })
-
-            // handle submenus
-            $parent.find('.dropdown-submenu').each(function() {
-                var $this = $(this)
-                var subTimeout
-
-                $this.hover(function() {
-
-                    window.clearTimeout(subTimeout)
-                    $this.children('.dropdown-menu').show()
-                    // always close submenu siblings instantly
-
-                    $this.siblings().children('.dropdown-menu').hide()
-                }, function() {
-                    var $submenu = $this.children('.dropdown-menu')
-                    subTimeout = window.setTimeout(function() {
-
-                        $submenu.hide()
-                    }, settings.delay)
-                })
-            })
-        })
-    }
-
-})(jQuery, window, document)
+    .to('.bar',     {duration:0.1, opacity:0, ease:Expo.easeIn, yoyo:true, repeat:5, repeatDelay:0.3}, 0)
+    .from('.txt1',  {duration:1.1, width:0, ease:SteppedEase.config(14), onUpdate:moveBar}, 2.5)
+    .to('.bar',     {duration:0.05, backgroundColor:color2}, '+=0.15')
+    .to('.bar',     {duration:1.0, width:290, ease:Power4.easeInOut}, '+=0.1')
+    .from('.sca',     {duration:1.0, x:135, ease:Power4.easeInOut}, '-=1.0')
+    .to('.txt2',    {duration:0.01, opacity:1}, '-=0.1')
+    .to('.bar',     {duration:0.4, x:290, width:0, ease:Power4.easeIn})
+    .from(t2,       {duration:0.6, opacity:0, ease:Power3.easeInOut, stagger:0.02}, '-=0.5')
+    .to('.txt1',    {duration:1.5, opacity:0.25, ease:Power3.easeInOut}, '-=1.2')
+    .timeScale(1.45)
