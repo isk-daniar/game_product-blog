@@ -20,10 +20,7 @@ class GPSerializerExpandPost(serializers.ModelSerializer):
         model = ExpandPost
         fields = ('__all__')
 
-    def to_representation(self, instance):
-        rep = super(GPSerializerExpandPost, self).to_representation(instance)
-        rep['postblog'] = instance.postblog.name
-        return rep
+
 
 
 

@@ -142,19 +142,27 @@ background-color: rgba(0,0,0,0.5);
     font-weight: 700;
     font-size: 1em;
     transition: background .5s;
+    text-transform: uppercase;
 }
 .gp-header-login-button:hover{
     color: #FF7600;
     background: black;
 }
 .gp-user-name{
-    color:;
+    color: #FF7600;
     transition: color .5s;
     text-overflow: ellipsis;
     max-width: 100px;
     overflow: hidden;
     white-space: nowrap;
     vertical-align: middle;
+    line-height: 2;
+    padding: 0 25px;
+    font-size: 1em;
+
+}
+.gp-user-name:hover{
+    color: #FF7600;
 }
 .gp-user-icon{
     margin-left: 10px;
@@ -163,36 +171,15 @@ background-color: rgba(0,0,0,0.5);
     vertical-align: middle;
 }
 .gp-header-dropdown-menu{
-    border-top: 2px solid #6ba539;
-    position: absolute;
-    top: 100%;
-    background: #333;
-    width: 100%;
-    min-width: 250px;
-    transform: translateY(1.5em);
-    z-index: 1;
-    transition: all .3s ease-in-out 0s,visibility 0s linear .3s,z-index 0s linear .01s;
-    visibility: hidden;
-    opacity: 0;
-    right: 0;
+    border-top: 2px solid #FF7600;
+
 }
-.gp-header-dropdown-menu.open{
-    visibility: visible;
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    -webkit-transition-delay: 0s,0s,.3s;
-    transition-delay: 0s,0s,.3s;
-}
-.gp-header-nav-item-button{
+.gp-header-nav-item-button-at{
     position: relative;
-    display: block;
-    color: #fff;
-    padding: 0 15px;
+    color: rgb(255,255,255);
     text-decoration: none;
-    border: 0;
-    outline: 0;
-    transition: background .5s,color .5s;
+    opacity: 0.7;
+    padding: 10%;
 }
 /* header-menu */
 
@@ -283,7 +270,6 @@ background-color: rgba(0,0,0,0.5);
     white-space: normal;
     transition: color 0.5s, opacity 0.5s, border-color 0.5s, background-color 0.5s;
     border-radius: 0;
-    color: #fff;
 }
 .box-cell {
     display: table-cell !important;
