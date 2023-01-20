@@ -47,6 +47,7 @@ body {
 	background-image: url(/media/background-image/background_imag-icon-3.jpg);
 	background-repeat: no-repeat;
 	text-decoration: none;
+	overflow-x: hidden;
 }
 a{
     text-decoration: none;
@@ -164,7 +165,7 @@ background-color: rgba(0,0,0,0.5);
 .gp-user-name:hover{
     color: #FF7600;
 }
-.gp-user-icon{
+.gp-header-icon{
     margin-left: 10px;
     padding-left: 10px;
     border-left: 1px solid hsla(0,0%,100%,.14);
@@ -192,7 +193,7 @@ background-color: rgba(0,0,0,0.5);
 	max-width: 1249px;
 	margin: 0 auto;
 	min-height: 89px;
-	background-color: rgba(0, 0, 0, 0.6);;
+	background-color: rgba(0, 0, 0, 0.6);
 }
 .menu-header{
 	padding-top: 29px;
