@@ -77,13 +77,37 @@ display: inline-block;
     margin-bottom: 30px;
 }
 .box-black {
-    background-color: rgba(0, 0, 0, 0.5) !important;
-}
-
-element.style {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .post-content {
     padding: 15px;
     font-weight: 300;
     overflow: hidden;
+}
+
+/* < --- > */
+
+.post-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+}
+.pull-left {
+    float: left !important;
+}
+.pull-right {
+    float: right !important;
+}
+.addthis_default_style .at300b {
+    padding: 0 2px;
+}
+.at-icon-wrapper {
+    display: inline-block;
+    overflow: hidden;
+}
+.at-icon {
+    fill: #fff;
+    border: 0;
 }
