@@ -1,7 +1,4 @@
-*.css linguist-detectable=false
-*.java linguist-detectable=false
-*.python linguist-detectable=true
-*.js linguist-detectable=false
-*.html linguist-detectable=false
-*.xml linguist-detectable=false
+*.css linguist-language=Python
+*.js linguist-language=Python
+*.html linguist-language=Python
 static/* linguist-vendored
