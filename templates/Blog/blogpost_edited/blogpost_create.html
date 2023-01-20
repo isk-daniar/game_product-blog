@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="tab-pane active" id="post-object-form">
+
+    <form action="api/v1/bp/" method="POST" enctype="multipart/form-data" class="form-horizontal" novalidate="">
+        <fieldset>
+            <input type="hidden" name="csrfmiddlewaretoken" value="3et0wxaO4jZ66JLamLve1GOFoLHfyfvWLaJN7soAfmTHzgTKnE5tRcPM9WeH8bct">
+            <div class="form-group ">
+                <label class="col-sm-2 control-label ">
+                    Name
+                </label>
+                <div class="col-sm-10">
+                    <input name="name" class="form-control" type="text" value="">
+                </div>
+            </div>
+            <div class="form-group ">
+                <label class="col-sm-2 control-label ">
+                    Image
+                </label>
+                <div class="col-sm-10">
+                    <input name="image" type="file" value="">
+                </div>
+            </div>
+            <div class="form-group ">
+
+                <label class="col-sm-2 control-label ">
+                    Textblog
+                </label>
+                <div class="col-sm-10">
+                    <input name="textblog" class="form-control" type="text" value="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label ">
+                    Postblog
+                </label>
+                <div class="col-sm-10">
+                    <select class="form-control" name="postblog">
+                        <option value="" selected="">--------</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button class="btn btn-primary js-tooltip" title="" data-original-title="Make a POST request on the Expand Post Api List resource">POST</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>

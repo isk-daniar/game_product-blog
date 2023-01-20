@@ -1,3 +1,6 @@
+from django.views.decorators.csrf import requires_csrf_token
+from django.core.files.storage import FileSystemStorage
+from django.http import JsonResponse
 from django.contrib.auth.models import User
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated, AllowAny
@@ -22,9 +25,14 @@ class RegisterView(generics.CreateAPIView):
 
 # class BlogPost
 class BlogPostAPIList(generics.ListCreateAPIView):
-    queryset = PostBlog.objects.all()
+    renderer_classes = [TemplateHTMLRenderer]
     serializer_class = GPSerializerPostBlog
     permission_classes = (IsAuthenticatedOrReadOnly, )
+    template_name = "Blog/blogpost_edited/blogpost_create.html"
+
+    def get(self, request):
+        queryset = PostBlog.objects.all()
+        return Response({'register_view':queryset})
 
 class BlogPostAPIUpdate(generics.RetrieveUpdateAPIView):
     queryset = PostBlog.objects.all()

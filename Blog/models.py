@@ -1,8 +1,8 @@
-from  ckeditor.fields import RichTextField
 from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
 from django.urls import reverse
 from django.contrib.auth.models import User
+from django_editorjs import EditorJsField
 
 class Category(MPTTModel):
     name = models.CharField(max_length=100)
@@ -55,8 +55,9 @@ class ExpandPost(models.Model):
         null=True
     )
     image = models.ImageField(upload_to='Blog/images/', blank=True)
-    textblog = RichTextField()
     user = models.ForeignKey(User, verbose_name='Users', on_delete=models.CASCADE)
+    textblog = EditorJsField()
+
 
     def __str__(self):
         return self.name
