@@ -4,7 +4,7 @@ from django.views.decorators.csrf import csrf_exempt, csrf_protect
 from .views import *
 
 
-app_name = 'game_product'
+app_name = 'gp_users'
 urlpatterns = [
     path('api/v1/auth/', include('rest_framework.urls')),
     # class ExpandPost
@@ -15,6 +15,7 @@ urlpatterns = [
     path('api/v1/bp/', BlogPostAPIList.as_view(), name='blogpost_create'),
     path('api/v1/bp/<int:pk>/', BlogPostAPIUpdate.as_view()),
     path('api/v1/bpdelete/<int:pk>', BlogPostAPIDestaroy.as_view()),
+
 
     # path('', include('djoser.urls')),
     # re_path(r'^auth/', include('djoser.urls.authtoken')),

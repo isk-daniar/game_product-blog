@@ -100,7 +100,7 @@ img {
 	display: flex;
 	align-items: stretch;
 	justify-content: center;
-	width: 100%;
+	width: 80%;
 	margin: 0 auto;
 	min-height: 50px;
 }
@@ -153,7 +153,6 @@ background-color: rgba(0,0,0,0.5);
     color: #FF7600;
     transition: color .5s;
     text-overflow: ellipsis;
-    max-width: 100px;
     overflow: hidden;
     white-space: nowrap;
     vertical-align: middle;
@@ -176,11 +175,26 @@ background-color: rgba(0,0,0,0.5);
 
 }
 .gp-header-nav-item-button-at{
-    position: relative;
+    display: block;
+    text-align: center;
     color: rgb(255,255,255);
     text-decoration: none;
     opacity: 0.7;
-    padding: 10%;
+    padding: 5%;
+}
+.divider-user{
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+.lin-user:before {
+    width: 500px;
+    content: "";
+    height: 1px;
+    background-color: rgba(255,255,255,.1);
+    position: absolute;
+
 }
 /* header-menu */
 
