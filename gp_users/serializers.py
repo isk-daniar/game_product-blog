@@ -20,13 +20,6 @@ class GPSerializerExpandPost(serializers.ModelSerializer):
         model = ExpandPost
         fields = ('__all__')
 
-
-
-
-
-
-
-
 class RegisterSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(
         required=True,

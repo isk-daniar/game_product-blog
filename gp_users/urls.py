@@ -16,6 +16,7 @@ urlpatterns = [
     path('api/v1/bp/<int:pk>/', BlogPostAPIUpdate.as_view()),
     path('api/v1/bpdelete/<int:pk>', BlogPostAPIDestaroy.as_view()),
 
+
     # path('', include('djoser.urls')),
     # re_path(r'^auth/', include('djoser.urls.authtoken')),
     path('api/v1/auth/register/', RegisterView.as_view(), name='auth_register'),
