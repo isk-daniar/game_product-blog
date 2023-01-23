@@ -11,3 +11,4 @@
  - Django <=4.0.5
  - sqlite3
 
+python manage.py runserver
