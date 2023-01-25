@@ -1,71 +1,24 @@
+{% load rest_framework %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
 <body>
 <div class="well tab-content">
-    <div class="tab-pane active" id="post-object-form">
-        <form action="/api/v1/bp/" method="POST" enctype="multipart/form-data" class="form-horizontal" novalidate="">
-            <fieldset>
-                <input type="hidden" name="csrfmiddlewaretoken" value="Qes2FQaFSxOay6B5QImXFHu70LtrQPuJyaIPgLor3AIL1DJFRBWcvdveLW0TqLbg">
-                <div class="form-group ">
-                    <label class="col-sm-2 control-label ">
-                        Name
-                    </label>
-                    <div class="col-sm-10">
-                        <input name="name" class="form-control" type="text" value="">
-                    </div>
-                </div>
-                <div class="form-group ">
-                    <label class="col-sm-2 control-label ">
-                        Description
-                    </label>
-                    <div class="col-sm-10">
-                        <input name="description" class="form-control" type="text" value="">
-                    </div>
-                </div>
-                <div class="form-group ">
-                    <label class="col-sm-2 control-label ">
-                        Image
-                    </label>
-                    <div class="col-sm-10">
-                        <input name="image" type="file" value="">
-                    </div>
-                </div>
-                <div class="form-group ">
-                    <label class="col-sm-2 control-label ">
-                        Slug
-                    </label>
+        <div class="tab-pane active" id="post-object-form">
+            <form action="{% url 'gp_users:blogpost_create' %}" method="POST" enctype="multipart/form-data" class="form-horizontal" novalidate="">
+                <fieldset>
+                    {% csrf_token %}
 
-                    <div class="col-sm-10">
-                        <input name="slug" class="form-control" type="text" value="">
+                    <div class="form-actions">
+                        <button class="btn btn-primary js-tooltip" title="">POST</button>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label ">
-                        Category
-                    </label>
-                    <div class="col-sm-10">
-                        <select class="form-control" name="category">
-                            <option value="">--------</option>
-                            <option value="1" selected="">News</option>
-                            <option value="2">Release</option>
-                            <option value="3">Community Radar</option>
-                            <option value="4">Devblog</option>
-                            <option value="5">More</option>
-                            <option value="6">LiveStream</option>
-                            <option value="7">Reports</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-actions">
-                    <button class="btn btn-primary js-tooltip" title="" data-original-title="Make a POST request on the Blog Post Api List resource">POST</button>
-                </div>
-            </fieldset>
-        </form>
-    </div>
+                </fieldset>
+            </form>
+        </div>
 </div>
 </body>
 </html>
