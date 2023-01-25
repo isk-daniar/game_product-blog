@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,7 +58,7 @@
                         </div>
                         <section>
                             <div class="">
-                                <form action="/api/v1/register/" method="POST" enctype="multipart/form-data" novalidate="">
+                                <form action="{% url 'gp_users:auth_register' %}" method="POST" enctype="multipart/form-data" novalidate="">
                                     <div  class="field-wrapper">
                                         <input type="hidden" name="csrfmiddlewaretoken" value="lEEmuDcA5Z9ZbQwatQjYOYXAgGRZ8us7gUICBF2rXGqHaCtVMXu1jmfOwQD6s4SE">
                                         <div class="">
@@ -144,7 +143,7 @@
                     <div class="divider-or">
                         <a href="{% url 'gp_users:auth_login' %}">
                             <button type="button" class="button-content button-bg"  style="font-size: 0.8em;">
-                                <span style="color: #fff;"">ALREADY HAVE AN ACCOUNT?</span>
+                                <span style="color: #fff;">ALREADY HAVE AN ACCOUNT?</span>
                             </button>
                         </a>
                     </div>
