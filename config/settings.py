@@ -162,4 +162,4 @@ REST_FRAMEWORK = {
     ],
 }
 
-LOGIN_REDIRECT_URL = "/ip/profile/"
+LOGIN_REDIRECT_URL = "/"

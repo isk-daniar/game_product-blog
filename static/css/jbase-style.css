@@ -361,3 +361,35 @@ background-color: rgba(0,0,0,0.5);
     list-style: none;
     margin-left: -5px;
 }
+.go-top {
+    position: fixed !important;
+    bottom: 2em;
+    right: 2em;
+    z-index: 100;
+    display: none;
+    padding: 1em;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+.go-top span {
+    border-radius: 50%;
+    border: 2px solid #fff;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    line-height: 20px;
+    background-color: #000;
+    font-size: 12px;
+}
+.show {
+  display: block !important;
+}
+.btn.btn-primary {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+.btn-primary:hover{
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(0, 0, 0, 0.1);
+}
