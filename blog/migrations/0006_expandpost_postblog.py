@@ -7,13 +7,13 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('Blog', '0005_remove_postblog_tags_delete_tag'),
+        ('blog', '0005_remove_postblog_tags_delete_tag'),
     ]
 
     operations = [
         migrations.AddField(
             model_name='expandpost',
             name='postblog',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='expandpostblog', to='Blog.postblog'),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='expandpostblog', to='blog.postblog'),
         ),
     ]

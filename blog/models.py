@@ -31,7 +31,7 @@ class PostBlog(models.Model):
         on_delete=models.SET_NULL,
         null=True
     )
-    image = models.ImageField(upload_to='Blog/images/')
+    image = models.ImageField(upload_to='blog/images/')
     create_at = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(max_length=200, default="")
     user = models.ForeignKey(User, verbose_name='Users', on_delete=models.CASCADE)
@@ -54,7 +54,7 @@ class ExpandPost(models.Model):
         on_delete=models.SET_NULL,
         null=True
     )
-    image = models.ImageField(upload_to='Blog/images/', blank=True)
+    image = models.ImageField(upload_to='blog/images/', blank=True)
     user = models.ForeignKey(User, verbose_name='Users', on_delete=models.CASCADE)
     textblog = EditorJsField()
 
@@ -64,7 +64,7 @@ class ExpandPost(models.Model):
 
 class RecentPosts(models.Model):
     name = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='Blog/images/')
+    image = models.ImageField(upload_to='blog/images/')
     post = models.ForeignKey(
         PostBlog,
         related_name="recentposts",

@@ -8,7 +8,7 @@ import mptt.fields
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('Blog', '0002_postblog_delete_project'),
+        ('blog', '0002_postblog_delete_project'),
     ]
 
     operations = [
@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
                 ('rght', models.PositiveIntegerField(editable=False)),
                 ('tree_id', models.PositiveIntegerField(db_index=True, editable=False)),
                 ('level', models.PositiveIntegerField(editable=False)),
-                ('parent', mptt.fields.TreeForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='children', to='Blog.category')),
+                ('parent', mptt.fields.TreeForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='children', to='blog.category')),
             ],
             options={
                 'abstract': False,
@@ -41,8 +41,8 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=100)),
-                ('image', models.ImageField(upload_to='Blog/images/')),
-                ('post', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='recentposts', to='Blog.postblog')),
+                ('image', models.ImageField(upload_to='blog/images/')),
+                ('post', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='recentposts', to='blog.postblog')),
             ],
         ),
         migrations.CreateModel(
@@ -53,17 +53,17 @@ class Migration(migrations.Migration):
                 ('create_at', models.DateTimeField(auto_now_add=True)),
                 ('textblog', models.TextField()),
                 ('url', models.URLField(blank=True)),
-                ('category', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='expandpost', to='Blog.category')),
+                ('category', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='expandpost', to='blog.category')),
             ],
         ),
         migrations.AddField(
             model_name='postblog',
             name='category',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='post', to='Blog.category'),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='post', to='blog.category'),
         ),
         migrations.AddField(
             model_name='postblog',
             name='tags',
-            field=models.ManyToManyField(related_name='postblog', to='Blog.tag'),
+            field=models.ManyToManyField(related_name='postblog', to='blog.tag'),
         ),
     ]

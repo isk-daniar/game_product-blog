@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('Blog', '0007_expandpost_image_postblog_slug_alter_postblog_name'),
+        ('blog', '0007_expandpost_image_postblog_slug_alter_postblog_name'),
     ]
 
     operations = [
