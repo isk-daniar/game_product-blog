@@ -44,11 +44,11 @@ INSTALLED_APPS = [
     'mptt',
     'ckeditor',
     
-    'Game',
-    'Blog',
-    'Community',
-    'Medias',
-    'Purchase',
+    'game',
+    'blog',
+    'community',
+    'medias',
+    'purchase',
     'gp_users',
 ]
 

@@ -16,11 +16,8 @@ urlpatterns = [
     path('api/v1/bp/<int:pk>/', BlogPostAPIUpdate.as_view()),
     path('api/v1/bpdelete/<int:pk>', BlogPostAPIDestaroy.as_view()),
 
-
-    # path('', include('djoser.urls')),
-    # re_path(r'^auth/', include('djoser.urls.authtoken')),
+    # class auth
     path('api/v1/auth/register/', RegisterView.as_view(), name='auth_register'),
-
     path('api/v1/auth/gp_login/', views.LoginView.as_view(template_name='gp_users/login_users-gp.html'), name='auth_login'),
     path('api/v1/auth/gp_logout/', views.LogoutView.as_view(), name='auth_logout'),
 ]

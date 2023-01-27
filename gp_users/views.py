@@ -9,7 +9,7 @@ from rest_framework.response import Response
 
 from .permissions import IsAdminOrReadOnly, IsOwnerOrReadOnly
 from .serializers import GPSerializerPostBlog, RegisterSerializer, GPSerializerExpandPost
-from Blog.models import PostBlog, ExpandPost
+from blog.models import PostBlog, ExpandPost
 
 
 
@@ -28,7 +28,7 @@ class BlogPostAPIList(generics.ListCreateAPIView):
     renderer_classes = [TemplateHTMLRenderer]
     serializer_class = GPSerializerPostBlog
     permission_classes = (IsAuthenticatedOrReadOnly, )
-    template_name = "Blog/blogpost_edited/blogpost_create.html"
+    template_name = "blog/blogpost_edited/blogpost_create.html"
 
     def get(self, request):
         queryset = PostBlog.objects.all()

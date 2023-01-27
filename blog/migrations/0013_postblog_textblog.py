@@ -7,7 +7,7 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('Blog', '0012_remove_expandpost_url_remove_postblog_url'),
+        ('blog', '0012_remove_expandpost_url_remove_postblog_url'),
     ]
 
     operations = [
