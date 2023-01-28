@@ -1,6 +1,3 @@
-from django.views.decorators.csrf import requires_csrf_token
-from django.core.files.storage import FileSystemStorage
-from django.http import JsonResponse
 from django.contrib.auth.models import User
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated, AllowAny
@@ -10,7 +7,6 @@ from rest_framework.response import Response
 from .permissions import IsAdminOrReadOnly, IsOwnerOrReadOnly
 from .serializers import GPSerializerPostBlog, RegisterSerializer, GPSerializerExpandPost
 from blog.models import PostBlog, ExpandPost
-
 
 
 class RegisterView(generics.CreateAPIView):

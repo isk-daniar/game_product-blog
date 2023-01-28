@@ -20,3 +20,7 @@ class PostDetailView(DetailView):
     model = PostBlog
     context_object_name = "postblog"
     slug_url_kwarg = 'postblog_slug'
+
+class BlogCategory(ListView):
+    model = Category
+    template_name = "blog/list_categories.html"

@@ -1,0 +1,6 @@
+{% for c in cats %}
+    <li class="blog-post_item">
+        <a class="blog-post_link" href="{{ c.get_absolute_url }}">{{c.name}}</a>
+    </li>
+{% endfor %}
+
