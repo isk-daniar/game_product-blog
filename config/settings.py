@@ -43,12 +43,8 @@ INSTALLED_APPS = [
     'djoser',
     'mptt',
     'ckeditor',
-    
-    'game',
+
     'blog',
-    'community',
-    'medias',
-    'purchase',
     'gp_users',
 ]
 
