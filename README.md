@@ -21,7 +21,7 @@
 
     cd game_product-blog
     
-    python -m venv venv
+    python3 -m venv venv
 
 ##### 3) Активировать виртуальное окружение
     
@@ -35,15 +35,15 @@ Windows
 
 ##### 4) Выполнить команду для выполнения миграций
 
-    python manage.py migrate
+    python3 manage.py migrate
     
 ##### 5) Создать суперпользователя
 
-    python manage.py createsuperuser
+    python3 manage.py createsuperuser
     
 ##### 6) Запустить сервер
 
-    python manage.py runserver
+    python3 manage.py runserver
 
 ##### 7) Ссылки
 
