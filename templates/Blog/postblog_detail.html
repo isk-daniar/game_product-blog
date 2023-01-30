@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
 Blog | GameProduct
 {% endblock %}
 
 {% block content %}
-    <link rel="stylesheet" href="/static/css/blog/qpostblog_detail-style.css">
+    {% block link %}
+        <link rel="stylesheet" href="{% static 'css/blog/qpostblog_detail-style.css' %}">
+    {% endblock %}
 <!-- blog_post_category.html start -->
     {% include 'Blog/include/blog_post_category.html' %}
 <!-- blog_post_category.html end -->
