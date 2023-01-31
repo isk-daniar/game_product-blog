@@ -2,6 +2,6 @@ djangorestframework
 djoser
 django-mptt
 django-ckeditor
-psycopg2
+psycopg2-binary
 django-editorjs
 Pillow
