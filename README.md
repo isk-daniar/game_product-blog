@@ -33,6 +33,10 @@ Windows
 
     ./venv/Scripts/activate
 
+##### 5) Установляем библиотеки 
+
+    pip install -r requirements.txt
+
 ##### 4) Выполнить команду для выполнения миграций
 
     python3 manage.py migrate
