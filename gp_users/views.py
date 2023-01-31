@@ -1,13 +1,14 @@
 from django.contrib.auth.models import User
+from django.urls import reverse_lazy
+from django.views.generic import CreateView
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated, AllowAny
 from rest_framework.renderers import TemplateHTMLRenderer
 from rest_framework.response import Response
 
-from .permissions import IsAdminOrReadOnly, IsOwnerOrReadOnly
-from .serializers import GPSerializerPostBlog, RegisterSerializer, GPSerializerExpandPost
-from blog.models import PostBlog, ExpandPost
 
+from .serializers import RegisterSerializer
+from forms import AddPostBlogForm, AddExpandPostForm
 
 class RegisterView(generics.CreateAPIView):
     renderer_classes = [TemplateHTMLRenderer]
@@ -19,40 +20,16 @@ class RegisterView(generics.CreateAPIView):
         queryset = User.objects.all()
         return Response({'register_view':queryset})
 
-# class BlogPost
-class BlogPostAPIList(generics.ListCreateAPIView):
-    renderer_classes = [TemplateHTMLRenderer]
-    serializer_class = GPSerializerPostBlog
-    permission_classes = (IsAuthenticatedOrReadOnly, )
+# class PostBlog
+class AddPostBlog(CreateView):
+    form_class = AddPostBlogForm
     template_name = "blog/blogpost_edited/blogpost_create.html"
-
-    def get(self, request):
-        queryset = PostBlog.objects.all()
-        return Response({'register_view':queryset})
-
-class BlogPostAPIUpdate(generics.RetrieveUpdateAPIView):
-    queryset = PostBlog.objects.all()
-    serializer_class = GPSerializerPostBlog
-    permission_classes = (IsAuthenticated, )
-
-class BlogPostAPIDestaroy(generics.RetrieveDestroyAPIView):
-    queryset = PostBlog.objects.all()
-    serializer_class = GPSerializerPostBlog
-    permission_classes = (IsAdminOrReadOnly, )
-
+    success_url = reverse_lazy('blogpost_create')
+    permission_classes = (IsAuthenticatedOrReadOnly,)
 
 # class ExpandPost
-class ExpandPostAPIList(generics.ListCreateAPIView):
-    queryset = ExpandPost.objects.all()
-    serializer_class = GPSerializerExpandPost
-    permission_classes = (IsAuthenticatedOrReadOnly, )
-
-class ExpandPostAPIUpdate(generics.RetrieveUpdateAPIView):
-    queryset = ExpandPost.objects.all()
-    serializer_class = GPSerializerExpandPost
-    permission_classes = (IsAuthenticated, )
-
-class ExpandPostAPIDestaroy(generics.RetrieveDestroyAPIView):
-    queryset = ExpandPost.objects.all()
-    serializer_class = GPSerializerExpandPost
-    permission_classes = (IsAdminOrReadOnly, )
+class AddExpandPost(CreateView):
+    form_class = AddExpandPostForm
+    template_name = "blog/blogpost_edited/expandpost_create.html."
+    success_url = reverse_lazy('expandpost_create')
+    permission_classes = (IsAuthenticatedOrReadOnly,)

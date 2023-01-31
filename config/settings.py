@@ -40,8 +40,7 @@ INSTALLED_APPS = [
 
     'rest_framework.authtoken',
     'rest_framework',
-    'djoser',
-    'mptt',
+    'django_editorjs_fields',
     'ckeditor',
 
     'blog',

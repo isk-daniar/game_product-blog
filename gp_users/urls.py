@@ -8,13 +8,14 @@ app_name = 'gp_users'
 urlpatterns = [
     path('api/v1/auth/', include('rest_framework.urls')),
     # class ExpandPost
-    path('api/v1/ep/', ExpandPostAPIList.as_view()),
-    path('api/v1/ep/<int:pk>/', ExpandPostAPIUpdate.as_view()),
-    path('api/v1/epdelete/<int:pk>', ExpandPostAPIDestaroy.as_view()),
+    path('api/v1/ep/', AddExpandPost.as_view(), name='expandpost_create'),
+    # path('api/v1/ep/<int:pk>/', ExpandPostAPIUpdate.as_view()),
+    # path('api/v1/epdelete/<int:pk>', ExpandPostAPIDestaroy.as_view()),
+
     # class BlogPost
-    path('api/v1/bp/', BlogPostAPIList.as_view(), name='blogpost_create'),
-    path('api/v1/bp/<int:pk>/', BlogPostAPIUpdate.as_view()),
-    path('api/v1/bpdelete/<int:pk>', BlogPostAPIDestaroy.as_view()),
+    path('api/v1/bp/', AddPostBlog.as_view(), name='blogpost_create'),
+    # path('api/v1/bp/<int:pk>/', BlogPostAPIUpdate.as_view()),
+    # path('api/v1/bpdelete/<int:pk>', BlogPostAPIDestaroy.as_view()),
 
     # class auth
     path('api/v1/auth/register/', RegisterView.as_view(), name='auth_register'),
