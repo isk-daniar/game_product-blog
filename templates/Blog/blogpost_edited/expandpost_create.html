@@ -9,6 +9,10 @@
 <form action="{% url 'gp_users:expandpost_create' %}" method="POST">
     {% csrf_token %}
     {{ form.as_p}}
+    {% load editorjs %}
+    {{ post.body_default }}
+    {{ post.body_editorjs | editorjs}}
+    {{ post.body_editorjs_text | editorjs}}
     <button type="submit">POST</button>
 </form>
 

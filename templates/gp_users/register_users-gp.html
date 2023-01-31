@@ -48,7 +48,6 @@
                                 <form action="{% url 'gp_users:auth_register' %}" method="POST" enctype="multipart/form-data" novalidate="">
                                     {% csrf_token %}
                                     <div  class="field-wrapper">
-                                        <input type="hidden" name="csrfmiddlewaretoken" value="lEEmuDcA5Z9ZbQwatQjYOYXAgGRZ8us7gUICBF2rXGqHaCtVMXu1jmfOwQD6s4SE">
                                         <div class="">
                                             <div class="">
                                                 <input name="username" placeholder="Nickname" class="form-control" type="text" value="">

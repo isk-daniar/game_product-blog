@@ -1,7 +1,7 @@
 djangorestframework
-djoser
-django-mptt
-django-ckeditor
-psycopg2-binary
+django-editorjs-fields
 django-editorjs
+django-mptt
+djoser
+psycopg2-binary
 Pillow
