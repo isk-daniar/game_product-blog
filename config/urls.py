@@ -5,7 +5,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('editorjs/', include('django_editorjs_fields.urls')),
     path('', include('blog.urls')),
     path('', include('gp_users.urls')),
 ]
