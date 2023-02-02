@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Creating a blog</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
 <body>
-<form action="{% url 'gp_users:expandpost_create' %}" method="POST">
+<form action="{% url 'gp_users:blogpost_create' %}" method="POST">
     {% csrf_token %}
     {{ form.as_p}}
     <button type="submit">POST</button>

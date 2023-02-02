@@ -1,10 +1,7 @@
-from django.core.files.storage import FileSystemStorage
-from django.shortcuts import render, redirect
-from django.views import View
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView
 
-from .models import PostBlog, Category, PostText
-from forms import TestForm
+from .models import PostBlog, Category
+
 
 class HomeView(ListView):
     model = PostBlog
@@ -27,28 +24,4 @@ class BlogCategory(ListView):
     model = Category
     template_name = "blog/list_categories.html"
 
-class PostCreate(CreateView):
-    form_class = TestForm
-    template_name = 'blog/blogpost_edited/post_create.html'
-
-class PostUpdate(View):
-    def get(self, request, pk):
-        post = PostText.objects.get(id=pk)
-        bound_form = TestForm(instance=post)
-        return render(request, 'blog/blogpost_edited/post_update.html', {'form': bound_form, 'post': post})
-
-    def post(self, request, pk):
-        post = PostText.objects.get(id=pk)
-        bound_form = TestForm(request.POST, instance=post)
-
-        if bound_form.is_valid():
-            new_post = bound_form.save()
-            return redirect(new_post)
-        return render(request, 'blog/blogpost_edited/post_update.html', {'form': bound_form, 'post': post})
-
-
-class PostView(View):
-    def get(self, request, pk):
-        post = PostText.objects.get(id=pk)
-        return render(request, 'blog/blogpost_edited/post_view.html', {'post': post})
 

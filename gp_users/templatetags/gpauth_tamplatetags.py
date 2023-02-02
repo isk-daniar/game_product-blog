@@ -1,6 +1,6 @@
 from django import template
 from django.urls import NoReverseMatch, reverse
-from django.utils.html import escape, format_html, smart_urlquote
+from django.utils.html import escape, format_html
 from django.utils.safestring import mark_safe
 
 

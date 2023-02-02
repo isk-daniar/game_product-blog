@@ -57,7 +57,6 @@ class ExpandPost(models.Model):
         on_delete=models.SET_NULL,
         null=True
     )
-    image = models.ImageField(upload_to='blog/images/', blank=True)
     user = models.ForeignKey(User, verbose_name='Users', on_delete=models.CASCADE)
     textblog = models.TextField(default="")
     body_editorjs = EditorJsJSONField(readOnly=False, autofocus=True, default="")
