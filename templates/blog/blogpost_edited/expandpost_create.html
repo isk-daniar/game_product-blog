@@ -3,16 +3,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Creating a blog</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
 <body>
-<form action="{% url 'gp_users:expandpost_create' %}" method="POST">
+{% if form %}
+    <!-- Form Errors -->
+    {% if form.errors %}
+        <ul class="errors">
+            {% for error in form.errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <!-- Display Form -->
+    <form method="post">
     {% csrf_token %}
-    {{ form.as_p}}
-    {{ post.body_editorjs | editorjs}}
-    <button type="submit">POST</button>
-</form>
+    {% for field in form %}
+        <div class="mydiv">
+            <label class="mylabel">{{ field.label }}</label>
+            {{ field }}
+        </div>
+    {% endfor %}
+        <button type="submit">POST</button>
+    </form>
+{% endif %}
+
+{{ form.media }}
 
 </body>
 </html>
