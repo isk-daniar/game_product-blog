@@ -27,8 +27,9 @@ class BlogCategory(ListView):
     model = Category
     template_name = "blog/list_categories.html"
 
-
-
+class PostCreate(CreateView):
+    form_class = TestForm
+    template_name = 'blog/blogpost_edited/post_create.html'
 
 class PostUpdate(View):
     def get(self, request, pk):
