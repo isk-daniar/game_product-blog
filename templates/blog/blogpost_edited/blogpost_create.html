@@ -6,9 +6,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
 <body>
-<form action="{% url 'gp_users:blogpost_create' %}" method="POST">
+<form action="{% url 'blogpost_create' %}" method="POST">
     {% csrf_token %}
-    {{ form.as_p}}
+    <div style=""><br>
+        {{ form.as_p}}
+    </div>
     <button type="submit">POST</button>
 </form>
 
