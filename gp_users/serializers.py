@@ -3,21 +3,9 @@ from django.contrib.auth.models import User
 from rest_framework.validators import UniqueValidator
 from django.contrib.auth.password_validation import validate_password
 
-from blog.models import PostBlog, ExpandPost
-from forms import AddPostBlogForm
 
-
-class GPSerializerPostBlog(serializers.ModelSerializer):
+class SerializerPostBlog(serializers.ModelSerializer):
     user = serializers.HiddenField(default=serializers.CurrentUserDefault())
-
-    forms = AddPostBlogForm
-
-class GPSerializerExpandPost(serializers.ModelSerializer):
-    user = serializers.HiddenField(default=serializers.CurrentUserDefault())
-
-    class Meta:
-        model = ExpandPost
-        fields = ('__all__')
 
 class RegisterSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(

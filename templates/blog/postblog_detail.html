@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load editorjs %}
 
 {% block title %}
 Blog | GameProduct
@@ -104,7 +105,7 @@ Blog | GameProduct
         </article>
         <div class="tile box-black post-content">
             <p>
-                {{ expandpostblog.textblog|safe }}
+                {{ expandpostblog.body_editorjs|editorjs }}
             </p>
         </div>
             {% endfor %}

@@ -2,7 +2,7 @@ from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
 from django.urls import reverse
 from django.contrib.auth.models import User
-from django_editorjs_fields import EditorJsJSONField, EditorJsTextField
+from django_editorjs_fields import EditorJsJSONField
 
 class Category(MPTTModel):
     name = models.CharField(max_length=100)
@@ -34,7 +34,7 @@ class PostBlog(models.Model):
         on_delete=models.SET_NULL,
         null=True
     )
-    image = models.ImageField(upload_to='blog/images/')
+    image = models.ImageField(upload_to='Blog/images/')
     create_at = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(max_length=200, default="")
     user = models.ForeignKey(User, verbose_name='Users', on_delete=models.CASCADE)
@@ -57,29 +57,12 @@ class ExpandPost(models.Model):
         on_delete=models.SET_NULL,
         null=True
     )
-    user = models.ForeignKey(User, verbose_name='Users', on_delete=models.CASCADE)
-    textblog = models.TextField(default="")
     body_editorjs = EditorJsJSONField(readOnly=False, autofocus=True, default="")
 
 
     def __str__(self):
         return self.name
 
-
-class PostText(models.Model):
-    body_editorjs = EditorJsJSONField(readOnly=False, autofocus=True)
-
-
-    def get_absolute_url(self):
-        return reverse('post_detail', kwargs={'pk': self.id})
-
-    def __str__(self):
-        return '{}'.format(self.id)
-
-class Comment(models.Model):
-    content = EditorJsJSONField(null=True, blank=True)
-    post = models.ForeignKey(
-        'PostText', related_name='comments', on_delete=models.CASCADE)
 
 class RecentPosts(models.Model):
     name = models.CharField(max_length=100)
