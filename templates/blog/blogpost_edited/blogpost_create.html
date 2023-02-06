@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Creating a blog</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-</head>
-<body>
-<form action="{% url 'blogpost_create' %}" method="POST">
+{% extends 'base.html' %}
+{% block content %}
+
+<form action="{% url 'blogpost_create' %}" enctype='multipart/form-data' method="POST">
     {% csrf_token %}
     <div style=""><br>
         {{ form.as_p}}
@@ -14,5 +9,4 @@
     <button type="submit">POST</button>
 </form>
 
-</body>
-</html>
+{% endblock %}

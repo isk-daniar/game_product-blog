@@ -31,6 +31,11 @@ class AddPostBlog(CreateView):
     form_class = AddPostBlogForm
     template_name = "blog/blogpost_edited/blogpost_create.html"
     success_url = reverse_lazy('blogpost_create')
+    exclude = ['user']
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
 
 # class ExpandPost
 class AddExpandPost(CreateView):

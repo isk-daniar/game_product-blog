@@ -4,6 +4,10 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 from django_editorjs_fields import EditorJsJSONField
 
+class MPTTMeta:
+    level_attr = 'mptt_level'
+    order_insertion_by = ['name']
+
 class Category(MPTTModel):
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100)
@@ -21,9 +25,6 @@ class Category(MPTTModel):
     def __str__(self):
         return self.name
 
-class MPTTMeta:
-    level_attr = 'mptt_level'
-    order_insertion_by = ['name']
 
 class PostBlog(models.Model):
     name = models.CharField(max_length=200)
@@ -62,15 +63,3 @@ class ExpandPost(models.Model):
 
     def __str__(self):
         return self.name
-
-
-class RecentPosts(models.Model):
-    name = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='blog/images/')
-    post = models.ForeignKey(
-        PostBlog,
-        related_name="recentposts",
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True
-    )
