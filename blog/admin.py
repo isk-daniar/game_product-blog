@@ -16,6 +16,6 @@ class PostAdmin(admin.ModelAdmin):
 class ExpandPostAdmin(admin.ModelAdmin):
     list_display = ["name", "create_at"]
 
-
-admin.site.register(models.Category, MPTTModelAdmin)
-admin.site.register(models.RecentPosts)
+@admin.register(models.Category)
+class CategoreAdmin(admin.ModelAdmin):
+    list_display = ["name", "slug"]
