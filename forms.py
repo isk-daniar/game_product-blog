@@ -1,14 +1,14 @@
 from django import forms
 from django_editorjs_fields import EditorJsWidget
+from rest_framework import serializers
 
-from gp_users.serializers import SerializerPostBlog
 from blog.models import *
 
 class AddPostBlogForm(forms.ModelForm):
-    user = SerializerPostBlog
+
     class Meta:
         model = PostBlog
-        fields = ['image', 'name', 'slug', 'description',  'category', 'user']
+        fields = ['name', 'slug', 'description', 'image', 'category']
 
 
 
