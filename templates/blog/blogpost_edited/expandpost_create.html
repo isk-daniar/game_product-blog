@@ -2,28 +2,27 @@
 {% block content %}
 {% load editorjs %}
 
-{% if form %}
-    <!-- Form Errors -->
-    {% if form.errors %}
-        <ul class="errors">
-            {% for error in form.errors %}
-                <li>{{ error }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}
-
     <!-- Display Form -->
-    <form method="post">
+<form method="post">
     {% csrf_token %}
-    {% for field in form %}
-        <div class="mydiv">
-            <label class="mylabel">{{ field.label }}</label>
-            {{ field }}
-        </div>
-    {% endfor %}
-        <button type="submit">POST</button>
-    </form>
-{% endif %}
+    <div class="fieldWrapper">
+        {{ form.name.errors }}
+        <label for="{{ form.name.id_for_label }}">Title:</label>
+        {{ form.name }}
+    </div>
+    <div class="fieldWrapper">
+        {{ form.postblog.errors }}
+        <label for="{{ form.postblog.id_for_label }}">Slug:</label>
+        {{ form.postblog }}
+    </div>
+    <div class="fieldWrapper">
+        {{ form.body_editorjs.errors }}
+        <label for="{{ form.body_editorjs.id_for_label }}">Description:</label>
+        {{ form.body_editorjs }}
+    </div>
+    <button type="submit">POST</button>
+</form>
+
 
 {{ form.media }}
 

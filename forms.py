@@ -1,10 +1,13 @@
 from django import forms
 from django_editorjs_fields import EditorJsWidget
-from rest_framework import serializers
 
 from blog.models import *
 
+
 class AddPostBlogForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['category'].empty_label = "Category not selected"
 
     class Meta:
         model = PostBlog
@@ -20,4 +23,5 @@ class AddExpandPostForm(forms.ModelForm):
         exclude = []
         widgets = {
             'body_editorjs': EditorJsWidget(config={'minHeight': 100}),
+            'name': forms.TextInput(attrs={'class': 'form-input'}),
         }
