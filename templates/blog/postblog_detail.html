@@ -8,7 +8,7 @@ Blog | GameProduct
 
 {% block content %}
     {% block link %}
-        <link rel="stylesheet" href="{% static 'css/blog/vpostblog_detail-style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/blog/fpostblog_detail-style.css' %}">
     {% endblock %}
 <!-- blog_post_category.html start -->
     {% include 'blog/include/blog_post_category.html' %}
@@ -22,8 +22,14 @@ Blog | GameProduct
                 <hgroup>
                     <h1 class="page-title">
                         <span class="text-medium page-bg page-t cursor-default">
-                            <span class="type">{{ expandpostblog.name }}</span>
-                            <span class="typed-cursor">_</span>
+                            <div id="typed-strings">
+                                <span>ПфьуЗкщвгс</span>
+                                <span>{{ expandpostblog.name }}</span>
+                            </div>
+
+                            <div class="text-typing">
+                                <span id="typed"></span>
+                            </div>
                         </span>
                     </h1>
                     <h2 class="text-small text-shadow">
