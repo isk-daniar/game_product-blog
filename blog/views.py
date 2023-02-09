@@ -26,6 +26,10 @@ class BlogCategory(ListView):
     model = Category
     template_name = "blog/list_categories.html"
 
+class BlogMenuView(ListView):
+    model = PostBlog
+    template_name = "blog/blogpost_edited/blog_create_menu.html"
+
 # class PostBlog
 class AddPostBlog(CreateView):
     form_class = AddPostBlogForm

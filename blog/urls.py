@@ -10,6 +10,7 @@ urlpatterns = [
 
     # Сreating a blog
 
+    path('api/v1/blogmenu/', views.BlogMenuView.as_view(), name='blog_menu'),
     # class ExpandPost
     path('api/v1/ep/', views.AddExpandPost.as_view(), name='expandpost_create'),
     # path('api/v1/ep/<int:pk>/', ExpandPostAPIUpdate.as_view()),

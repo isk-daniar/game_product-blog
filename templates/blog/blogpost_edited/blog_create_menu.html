@@ -17,36 +17,37 @@
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/gbase-style.css' %}">
     <link rel="stylesheet" href="{% static 'css/blog/qblog_post-style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blog/blog-post-edited_style/sblog-post-edited.css' %}">
     {% block link %}{% endblock %}
     <!-- FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap&subset=cyrillic" rel="stylesheet">
 </head>
 <body id="go-top">
         <header class="header-gp compact">
-            <div class="gp-header-logo-wrapper">
-                <a>
-                    <img src="/media/logo/gp-logo-4.png">
-                </a>
-            </div>
-            <nav class="gp-header-nav-center">
-                <ul class="gp-header-nav-items">
-                    <li class="gp-header-nav-item active">
-                        <a class="gp-header-nav-item-button">
-                            <span>Games</span>
-                        </a>
-                    </li>
-                    <li class="gp-header-nav-item active">
-                        <a class="gp-header-nav-item-button">
-                            <span>Company</span>
-                        </a>
-                    </li>
-                    <li class="gp-header-nav-item active">
-                        <a class="gp-header-nav-item-button">
-                            <span>Store</span>
-                        </a>
-                    </li>
+            <div class="logodrop">
+                <button class="btn gp-user-name" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="logobropsvg">
+                            <svg focusable="false" viewBox="0 0 24 24">
+                                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+                            </svg>
+                        </div>
+                </button>
+                <ul class="dropdown-menu gp-header-dropdown-menu sds" aria-labelledby="dropdownMenuButton1" data-popper-placement="bottom-start" style="position: absolute; overflow: hidden;  margin: 0px; transform: translate(1px, 47px);">
+                    <li><a class="gp-header-nav-item-button-at" href="">Account Settings</a></li>
+                    <li><a class="gp-header-nav-item-button-at" href="">Сreate a blog</a></li>
                 </ul>
-            </nav>
+                <div class="gp-header-logo-wrapper">
+                    <a>
+                        <img src="/media/logo/gp-logo-4.png">
+                    </a>
+                </div>
+            </div>
+            <div class="d1">
+              <form class="" >
+              <input type="text" placeholder="Искать здесь...">
+                  <button type="submit"></button>
+              </form>
+            </div>
             <aside class="gp-header-aside">
                 <ul class="gp-header-aside-items">
                     <li class="gp-header-aside-item">
@@ -63,38 +64,7 @@
                 </ul>
             </aside>
         </header>
-
-        <!-- Menu -->
-        <section class="menu-header">
-            <header class="wrapper">
-                <div class="header-menu header-menu_bg-color">
-                    <ul class="header-menu_list">
-                        <li class="header-menu_item">
-                            <a href="" class="header-menu_link">game</a>
-                        </li>
-                        <li class="header-menu_item">
-                            <a href="{% url 'home' %}" class="header-menu_link">blog</a>
-                        </li>
-                        <li class="header-menu_item">
-                            <a href="" class="header-menu_link">media</a>
-                        </li>
-                        <li class="header-menu_item">
-                            <a href="" class="header-menu_link">dlc</a>
-                        </li>
-                        <li class="header-menu_item">
-                            <a href="" class="header-menu_link">about</a>
-                        </li>
-                        <li class="header-menu_item">
-                            <a href="" class="header-menu_link">buy</a>
-                        </li>
-                    </ul>
-                </div>
-            </header>
-        </section>
-        <br>
-        <br>
-
-    <!-- Content start -->
+            <!-- Content start -->
     <main class="main">
         {% block content %}{% endblock %}
     </main>
