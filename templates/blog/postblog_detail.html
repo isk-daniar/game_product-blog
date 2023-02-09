@@ -8,7 +8,7 @@ Blog | GameProduct
 
 {% block content %}
     {% block link %}
-        <link rel="stylesheet" href="{% static 'css/blog/fpostblog_detail-style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/blog/spostblog_detail-style.css' %}">
     {% endblock %}
 <!-- blog_post_category.html start -->
     {% include 'blog/include/blog_post_category.html' %}
@@ -109,7 +109,7 @@ Blog | GameProduct
                 </div>
             </header>
         </article>
-        <div id="imgs_center" class="tile box-black post-content">
+        <div class="tile box-black post-content imgs_center">
             <p>
                 {{ expandpostblog.body_editorjs|editorjs }}
             </p>
