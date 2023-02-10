@@ -1,3 +1,7 @@
+.header-gp{
+    position: fixed;
+    top: 0;
+}
 .logodrop{
     display: flex;
 }
