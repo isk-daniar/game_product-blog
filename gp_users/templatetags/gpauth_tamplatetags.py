@@ -52,7 +52,7 @@ def optional_logout(request, user):
                       </button>
                       <ul class="dropdown-menu gp-header-dropdown-menu" aria-labelledby="dropdownMenuButton1" data-popper-placement="bottom-start" style="position: absolute; overflow: hidden;  margin: 0px; transform: translate(1317px, 310px);">
                         <li><a class="gp-header-nav-item-button-at" href="">Account Settings</a></li>
-                        <li><a class="gp-header-nav-item-button-at" href="http://127.0.0.1:8000/api/v1/bp/">Сreate a blog</a></li>
+                        <li><a class="gp-header-nav-item-button-at" href="http://127.0.0.1:8000/api/v1/blogmenu/">Blog menu</a></li>
                         <div class="divider-user">
                             <div class="lin-user"></div>
                             <li><a class="gp-header-nav-item-button-at" href='{href}?next={next}'>Logout</a></li>

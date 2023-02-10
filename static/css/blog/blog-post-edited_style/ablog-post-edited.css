@@ -2,16 +2,7 @@
     position: fixed;
     top: 0;
 }
-.logodrop{
-    display: flex;
-}
-.logobropsvg{
-    height: 35px;
-    width: 35px;
-}
-.sds{
-    transform: translate(0px, 47px);
-}
+/* search */
 .main_blog_menu{
     bottom: auto;
     right: auto;
@@ -49,4 +40,54 @@
   font-family: FontAwesome;
   font-size: 16px;
   color: #F9F0DA;
+}
+
+.main_crt_bt_menu{
+    align-items: center;
+    display: flex;
+    height: 40px;
+    justify-content: left;
+    margin-bottom: 24px;
+    margin-left: 16px;
+    margin-top: 12px;
+    min-width: 98px;
+    padding: 0 16px;
+}
+.crt-dt-menu{
+    border: 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+}
+.crt_bt_cl{
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid #FF7600;
+    color: #FF7600;
+}
+.ps-bt-menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.crt-span-bt{
+     position: relative;
+}
+.crt-item-bt{
+    align-items: center;
+    display: flex;
+    margin: 0;
+    line-height: 20px;
+}
+.crt-bt-icon{
+
+}
+.crt-bt-text{
+    padding-left: 10px
 }
