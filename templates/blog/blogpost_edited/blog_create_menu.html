@@ -17,8 +17,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/gbase-style.css' %}">
     <link rel="stylesheet" href="{% static 'css/blog/qblog_post-style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/blog/blog-post-edited_style/ablog-post-edited.css' %}">
-    <link rel="stylesheet" href="{% static 'css/blog/left-slide-panel/zleft-nav-style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blog/blog-post-edited_style/dblog-post-edited.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blog/bp-forms-style/aleft-nav-style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blog/bp-forms-style/abp-crt-wd.css' %}">
     {% block link %}{% endblock %}
     <!-- FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap&subset=cyrillic" rel="stylesheet">
@@ -52,108 +53,124 @@
                 </ul>
             </aside>
         </header>
-            <!-- Content start -->
     <main class="main" style="margin-top: 70px;">
-                <input type="checkbox" id="nav-toggle" hidden>
-                <nav class="nav">
-                    <label for="nav-toggle" class="nav-toggle" onclick></label>
-                    <h2 class="logo">
-                        <a href="">GameProduct</a>
-                    </h2>
-                    <ul>
-                        <div class="main_crt_bt_menu crt-dt-menu crt_bt_cl">
-                            <div class="ps-bt-menu"></div>
-                            <span class="crt-span-bt">
-                                <span class="crt-item-bt">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square crt-bt-icon" viewBox="0 0 16 16">
-                                      <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                                      <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                                    </svg>
-                                    <span class="crt-bt-text">new blog</span>
-                                </span>
+        <input type="checkbox" id="nav-toggle" hidden>
+        <nav class="nav">
+            <label for="nav-toggle" class="nav-toggle" onclick></label>
+            <h2 class="logo">
+                <a href="">GameProduct</a>
+            </h2>
+            <ul>
+                <div class="main_crt_bt_menu crt-dt-menu crt_bt_cl">
+                    <a href="#win1">
+                        <div class="ps-bt-menu"></div>
+                        <span class="crt-span-bt">
+                            <span class="crt-item-bt">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square crt-bt-icon" viewBox="0 0 16 16">
+                                  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                </svg>
+                                <span class="crt-bt-text">new blog</span>
                             </span>
+                        </span>
+                    </a>
+                </div>
+                <li><a href="#1">Один</a>
+                <li><a href="#2">Два</a>
+                <li><a href="#3">Три</a>
+                <li><a href="#4">Четыре</a>
+                <li><a href="#5">Пять</a>
+                <li><a href="#6">Шесть</a>
+                <li><a href="#7">Семь</a>
+            </ul>
+        </nav>
+        <div class="dm-overlay" id="win1">
+            <div class="dm-table">
+                <div class="dm-cell">
+                    <div class="dm-modal">
+                        <a href="#close" class="close"></a>
+                        <h3>Модальный блок №1 абсолютно по центру.</h3>
+                        <div class="pl-left">
+                            <img src="http://lorempixel.com/320/320/people/some-text">
                         </div>
-                        <li><a href="#1">Один</a>
-                        <li><a href="#2">Два</a>
-                        <li><a href="#3">Три</a>
-                        <li><a href="#4">Четыре</a>
-                        <li><a href="#5">Пять</a>
-                        <li><a href="#6">Шесть</a>
-                        <li><a href="#7">Семь</a>
-                    </ul>
-                </nav>
+                        <p>Окно выводится строго по центру, по горизонтали и по вертикали, внутри контейнера с относительным позиционированием. В данном примере показана возможность использования встроенных миниатюр, разположенных слева в div-контейнере с выделенным классом <code>.pl-left</code></p>
+                        <p>Размер блока миниатюр определил в 25% от родительского контейнера, тем самым обеспечив возможность пропорционального изменения, при просмотре на экранах различных пользовательских устройств.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="header-menu">
+        Family agreement reasonably rent girl little burst visited begin arrived.
+        Conveying terms painful misery summer cousins colonel mile ham tore discretion cousins elsewhere points play itself. Living after men cease pretty any branched soon though sitting dinner moment. Leaf sold relation timed above. Eat delivered walk plan northward offered promise chiefly green read edward departure by. Water existence chief though head settle.
+
+        Shortly from covered denote shewing mutual end admiration partiality mistress oh merely. Arrived inhabiting wished whose matter upon acceptance beloved change seemed wound through above shameless age moments stimulated. Case offence ready mind. Weddings themselves none made outward least both help  design full years held behind surrounded. Nature being sooner cousin unaffected sending particular object.
+
+        Sure nature child engrossed building improve started repulsive performed through. Easily books dining who themselves removed neglected by invitation oh arrived. Concerns hopes uncommonly likely last enquire abilities rich property conveying we direction necessary behind felt held. Body change declared musical suffer carried avoid tiled cold valley away. Strongly weddings add grave green received pretended.
+
+        Day farther dissuade shyness exposed. Inquiry half resolving rest china provision am lasting breeding. Bringing end tried enough terminated lose wicket weeks found pain dispatched subject hour effect. Another wondered placing as nature chiefly rapid long linen. Lasting bachelor did literature itself peculiar desirous wish drawings purse melancholy their dear.
+
+        Formal warrant mirth pronounce horses husbands afford him this agreement continuing debating thing supplied him cousins resolve. Explain did friends boy carriage play agreement remaining farther. Greater wished cousins tended believe observe. Mention motionless pronounce abode waited country entreaties procured away. Favour fine arose continuing gate insipidity little garrets attempted suppose late required newspaper summer declared defer.
+
+        Affronting jokes sitting game hardly talking half cause sincerity suitable. Plan bred shall called graceful effect disposing limited. Engaged seemed little distance impossible these besides past lady amiable saved impossible forbade noisier wandered simplicity remainder. Vanity outlived built hold account whatever moment hour valley four certain occasion. Favourable moderate welcomed provided started defective studied towards bred name.
+
+        Strictly valley not wise improve. Cousins smile supported addition which. Defective about ye trifling water commanded nature simple correct. Table get pleasant four open real right pleasure ham year. Attempted equal distrusts power belonging me agreeable husband full sister aware moments were.
+
+        Feel rank enjoy earnestly uncommonly or no right may giving answer extended other hope defective landlord. Ecstatic northward elegance discourse. Sitting likewise friend assure have jokes produced weddings expense husbands think delivered betrayed can. Near woody debating moonlight properly fond newspaper compact none. None regard position.
+
+        Wishing shot dining sure past theirs unknown true relied. Its thirty related thoroughly have sure open musical concern joy truth believing message projecting. Excellent allowance think. Income dare branched marry remaining secure would thirty being demands keeps polite them allow worthy. In sweetness explain suffer attention husbands saw prudent busy season.
+
+        Like have felicity affronting their sensible was inhabiting amiable laughing letters suspicion body share. Spring sensible hundred happen bringing. Sent hunted head greater tolerably horses gentleman game furnished attacks agreeable summer lived pure. Cease week garden offer conduct required wise entrance declared like shy. Result upon extent.
+
+        Believing sussex use alteration offered among strongly objection resolve any. Laughter necessary man seven maids advanced hand. Scarcely pain see smile merry engrossed pasture among moonlight minuter females affection ferrars paid. Perfectly tore made with. Merit overcame unpleasant beyond prepared leave followed advanced wrong drew sussex sex rose understood stronger.
+
         Family agreement reasonably rent girl little burst visited begin arrived.
 
-Conveying terms painful misery summer cousins colonel mile ham tore discretion cousins elsewhere points play itself. Living after men cease pretty any branched soon though sitting dinner moment. Leaf sold relation timed above. Eat delivered walk plan northward offered promise chiefly green read edward departure by. Water existence chief though head settle.
+        Conveying terms painful misery summer cousins colonel mile ham tore discretion cousins elsewhere points play itself. Living after men cease pretty any branched soon though sitting dinner moment. Leaf sold relation timed above. Eat delivered walk plan northward offered promise chiefly green read edward departure by. Water existence chief though head settle.
 
-Shortly from covered denote shewing mutual end admiration partiality mistress oh merely. Arrived inhabiting wished whose matter upon acceptance beloved change seemed wound through above shameless age moments stimulated. Case offence ready mind. Weddings themselves none made outward least both help  design full years held behind surrounded. Nature being sooner cousin unaffected sending particular object.
+        Shortly from covered denote shewing mutual end admiration partiality mistress oh merely. Arrived inhabiting wished whose matter upon acceptance beloved change seemed wound through above shameless age moments stimulated. Case offence ready mind. Weddings themselves none made outward least both help  design full years held behind surrounded. Nature being sooner cousin unaffected sending particular object.
 
-Sure nature child engrossed building improve started repulsive performed through. Easily books dining who themselves removed neglected by invitation oh arrived. Concerns hopes uncommonly likely last enquire abilities rich property conveying we direction necessary behind felt held. Body change declared musical suffer carried avoid tiled cold valley away. Strongly weddings add grave green received pretended.
+        Sure nature child engrossed building improve started repulsive performed through. Easily books dining who themselves removed neglected by invitation oh arrived. Concerns hopes uncommonly likely last enquire abilities rich property conveying we direction necessary behind felt held. Body change declared musical suffer carried avoid tiled cold valley away. Strongly weddings add grave green received pretended.
 
-Day farther dissuade shyness exposed. Inquiry half resolving rest china provision am lasting breeding. Bringing end tried enough terminated lose wicket weeks found pain dispatched subject hour effect. Another wondered placing as nature chiefly rapid long linen. Lasting bachelor did literature itself peculiar desirous wish drawings purse melancholy their dear.
+        Day farther dissuade shyness exposed. Inquiry half resolving rest china provision am lasting breeding. Bringing end tried enough terminated lose wicket weeks found pain dispatched subject hour effect. Another wondered placing as nature chiefly rapid long linen. Lasting bachelor did literature itself peculiar desirous wish drawings purse melancholy their dear.
 
-Formal warrant mirth pronounce horses husbands afford him this agreement continuing debating thing supplied him cousins resolve. Explain did friends boy carriage play agreement remaining farther. Greater wished cousins tended believe observe. Mention motionless pronounce abode waited country entreaties procured away. Favour fine arose continuing gate insipidity little garrets attempted suppose late required newspaper summer declared defer.
+        Formal warrant mirth pronounce horses husbands afford him this agreement continuing debating thing supplied him cousins resolve. Explain did friends boy carriage play agreement remaining farther. Greater wished cousins tended believe observe. Mention motionless pronounce abode waited country entreaties procured away. Favour fine arose continuing gate insipidity little garrets attempted suppose late required newspaper summer declared defer.
 
-Affronting jokes sitting game hardly talking half cause sincerity suitable. Plan bred shall called graceful effect disposing limited. Engaged seemed little distance impossible these besides past lady amiable saved impossible forbade noisier wandered simplicity remainder. Vanity outlived built hold account whatever moment hour valley four certain occasion. Favourable moderate welcomed provided started defective studied towards bred name.
+        Affronting jokes sitting game hardly talking half cause sincerity suitable. Plan bred shall called graceful effect disposing limited. Engaged seemed little distance impossible these besides past lady amiable saved impossible forbade noisier wandered simplicity remainder. Vanity outlived built hold account whatever moment hour valley four certain occasion. Favourable moderate welcomed provided started defective studied towards bred name.
 
-Strictly valley not wise improve. Cousins smile supported addition which. Defective about ye trifling water commanded nature simple correct. Table get pleasant four open real right pleasure ham year. Attempted equal distrusts power belonging me agreeable husband full sister aware moments were.
+        Strictly valley not wise improve. Cousins smile supported addition which. Defective about ye trifling water commanded nature simple correct. Table get pleasant four open real right pleasure ham year. Attempted equal distrusts power belonging me agreeable husband full sister aware moments were.
 
-Feel rank enjoy earnestly uncommonly or no right may giving answer extended other hope defective landlord. Ecstatic northward elegance discourse. Sitting likewise friend assure have jokes produced weddings expense husbands think delivered betrayed can. Near woody debating moonlight properly fond newspaper compact none. None regard position.
+        Feel rank enjoy earnestly uncommonly or no right may giving answer extended other hope defective landlord. Ecstatic northward elegance discourse. Sitting likewise friend assure have jokes produced weddings expense husbands think delivered betrayed can. Near woody debating moonlight properly fond newspaper compact none. None regard position.
 
-Wishing shot dining sure past theirs unknown true relied. Its thirty related thoroughly have sure open musical concern joy truth believing message projecting. Excellent allowance think. Income dare branched marry remaining secure would thirty being demands keeps polite them allow worthy. In sweetness explain suffer attention husbands saw prudent busy season.
+        Wishing shot dining sure past theirs unknown true relied. Its thirty related thoroughly have sure open musical concern joy truth believing message projecting. Excellent allowance think. Income dare branched marry remaining secure would thirty being demands keeps polite them allow worthy. In sweetness explain suffer attention husbands saw prudent busy season.
 
-Like have felicity affronting their sensible was inhabiting amiable laughing letters suspicion body share. Spring sensible hundred happen bringing. Sent hunted head greater tolerably horses gentleman game furnished attacks agreeable summer lived pure. Cease week garden offer conduct required wise entrance declared like shy. Result upon extent.
+        Like have felicity affronting their sensible was inhabiting amiable laughing letters suspicion body share. Spring sensible hundred happen bringing. Sent hunted head greater tolerably horses gentleman game furnished attacks agreeable summer lived pure. Cease week garden offer conduct required wise entrance declared like shy. Result upon extent.
 
-Believing sussex use alteration offered among strongly objection resolve any. Laughter necessary man seven maids advanced hand. Scarcely pain see smile merry engrossed pasture among moonlight minuter females affection ferrars paid. Perfectly tore made with. Merit overcame unpleasant beyond prepared leave followed advanced wrong drew sussex sex rose understood stronger.
+        Believing sussex use alteration offered among strongly objection resolve any. Laughter necessary man seven maids advanced hand. Scarcely pain see smile merry engrossed pasture among moonlight minuter females affection ferrars paid. Perfectly tore made with. Merit overcame unpleasant beyond prepared leave followed advanced wrong drew sussex sex rose understood stronger.
 
-Family agreement reasonably rent girl little burst visited begin arrived.
+        Family agreement reasonably rent girl little burst visited begin arrived.
 
-Conveying terms painful misery summer cousins colonel mile ham tore discretion cousins elsewhere points play itself. Living after men cease pretty any branched soon though sitting dinner moment. Leaf sold relation timed above. Eat delivered walk plan northward offered promise chiefly green read edward departure by. Water existence chief though head settle.
+        Conveying terms painful misery summer cousins colonel mile ham tore discretion cousins elsewhere points play itself. Living after men cease pretty any branched soon though sitting dinner moment. Leaf sold relation timed above. Eat delivered walk plan northward offered promise chiefly green read edward departure by. Water existence chief though head settle.
 
-Shortly from covered denote shewing mutual end admiration partiality mistress oh merely. Arrived inhabiting wished whose matter upon acceptance beloved change seemed wound through above shameless age moments stimulated. Case offence ready mind. Weddings themselves none made outward least both help  design full years held behind surrounded. Nature being sooner cousin unaffected sending particular object.
+        Shortly from covered denote shewing mutual end admiration partiality mistress oh merely. Arrived inhabiting wished whose matter upon acceptance beloved change seemed wound through above shameless age moments stimulated. Case offence ready mind. Weddings themselves none made outward least both help  design full years held behind surrounded. Nature being sooner cousin unaffected sending particular object.
 
-Sure nature child engrossed building improve started repulsive performed through. Easily books dining who themselves removed neglected by invitation oh arrived. Concerns hopes uncommonly likely last enquire abilities rich property conveying we direction necessary behind felt held. Body change declared musical suffer carried avoid tiled cold valley away. Strongly weddings add grave green received pretended.
+        Sure nature child engrossed building improve started repulsive performed through. Easily books dining who themselves removed neglected by invitation oh arrived. Concerns hopes uncommonly likely last enquire abilities rich property conveying we direction necessary behind felt held. Body change declared musical suffer carried avoid tiled cold valley away. Strongly weddings add grave green received pretended.
 
-Day farther dissuade shyness exposed. Inquiry half resolving rest china provision am lasting breeding. Bringing end tried enough terminated lose wicket weeks found pain dispatched subject hour effect. Another wondered placing as nature chiefly rapid long linen. Lasting bachelor did literature itself peculiar desirous wish drawings purse melancholy their dear.
+        Day farther dissuade shyness exposed. Inquiry half resolving rest china provision am lasting breeding. Bringing end tried enough terminated lose wicket weeks found pain dispatched subject hour effect. Another wondered placing as nature chiefly rapid long linen. Lasting bachelor did literature itself peculiar desirous wish drawings purse melancholy their dear.
 
-Formal warrant mirth pronounce horses husbands afford him this agreement continuing debating thing supplied him cousins resolve. Explain did friends boy carriage play agreement remaining farther. Greater wished cousins tended believe observe. Mention motionless pronounce abode waited country entreaties procured away. Favour fine arose continuing gate insipidity little garrets attempted suppose late required newspaper summer declared defer.
+        Formal warrant mirth pronounce horses husbands afford him this agreement continuing debating thing supplied him cousins resolve. Explain did friends boy carriage play agreement remaining farther. Greater wished cousins tended believe observe. Mention motionless pronounce abode waited country entreaties procured away. Favour fine arose continuing gate insipidity little garrets attempted suppose late required newspaper summer declared defer.
 
-Affronting jokes sitting game hardly talking half cause sincerity suitable. Plan bred shall called graceful effect disposing limited. Engaged seemed little distance impossible these besides past lady amiable saved impossible forbade noisier wandered simplicity remainder. Vanity outlived built hold account whatever moment hour valley four certain occasion. Favourable moderate welcomed provided started defective studied towards bred name.
+        Affronting jokes sitting game hardly talking half cause sincerity suitable. Plan bred shall called graceful effect disposing limited. Engaged seemed little distance impossible these besides past lady amiable saved impossible forbade noisier wandered simplicity remainder. Vanity outlived built hold account whatever moment hour valley four certain occasion. Favourable moderate welcomed provided started defective studied towards bred name.
 
-Strictly valley not wise improve. Cousins smile supported addition which. Defective about ye trifling water commanded nature simple correct. Table get pleasant four open real right pleasure ham year. Attempted equal distrusts power belonging me agreeable husband full sister aware moments were.
+        Strictly valley not wise improve. Cousins smile supported addition which. Defective about ye trifling water commanded nature simple correct. Table get pleasant four open real right pleasure ham year. Attempted equal distrusts power belonging me agreeable husband full sister aware moments were.
 
-Feel rank enjoy earnestly uncommonly or no right may giving answer extended other hope defective landlord. Ecstatic northward elegance discourse. Sitting likewise friend assure have jokes produced weddings expense husbands think delivered betrayed can. Near woody debating moonlight properly fond newspaper compact none. None regard position.
+        Feel rank enjoy earnestly uncommonly or no right may giving answer extended other hope defective landlord. Ecstatic northward elegance discourse. Sitting likewise friend assure have jokes produced weddings expense husbands think delivered betrayed can. Near woody debating moonlight properly fond newspaper compact none. None regard position.
 
-Wishing shot dining sure past theirs unknown true relied. Its thirty related thoroughly have sure open musical concern joy truth believing message projecting. Excellent allowance think. Income dare branched marry remaining secure would thirty being demands keeps polite them allow worthy. In sweetness explain suffer attention husbands saw prudent busy season.
+        Wishing shot dining sure past theirs unknown true relied. Its thirty related thoroughly have sure open musical concern joy truth believing message projecting. Excellent allowance think. Income dare branched marry remaining secure would thirty being demands keeps polite them allow worthy. In sweetness explain suffer attention husbands saw prudent busy season.
 
-Like have felicity affronting their sensible was inhabiting amiable laughing letters suspicion body share. Spring sensible hundred happen bringing. Sent hunted head greater tolerably horses gentleman game furnished attacks agreeable summer lived pure. Cease week garden offer conduct required wise entrance declared like shy. Result upon extent.
+        Like have felicity affronting their sensible was inhabiting amiable laughing letters suspicion body share. Spring sensible hundred happen bringing. Sent hunted head greater tolerably horses gentleman game furnished attacks agreeable summer lived pure. Cease week garden offer conduct required wise entrance declared like shy. Result upon extent.
 
-Believing sussex use alteration offered among strongly objection resolve any. Laughter necessary man seven maids advanced hand. Scarcely pain see smile merry engrossed pasture among moonlight minuter females affection ferrars paid. Perfectly tore made with. Merit overcame unpleasant beyond prepared leave followed advanced wrong drew sussex sex rose understood stronger.
-
-Family agreement reasonably rent girl little burst visited begin arrived.
-
-Conveying terms painful misery summer cousins colonel mile ham tore discretion cousins elsewhere points play itself. Living after men cease pretty any branched soon though sitting dinner moment. Leaf sold relation timed above. Eat delivered walk plan northward offered promise chiefly green read edward departure by. Water existence chief though head settle.
-
-Shortly from covered denote shewing mutual end admiration partiality mistress oh merely. Arrived inhabiting wished whose matter upon acceptance beloved change seemed wound through above shameless age moments stimulated. Case offence ready mind. Weddings themselves none made outward least both help  design full years held behind surrounded. Nature being sooner cousin unaffected sending particular object.
-
-Sure nature child engrossed building improve started repulsive performed through. Easily books dining who themselves removed neglected by invitation oh arrived. Concerns hopes uncommonly likely last enquire abilities rich property conveying we direction necessary behind felt held. Body change declared musical suffer carried avoid tiled cold valley away. Strongly weddings add grave green received pretended.
-
-Day farther dissuade shyness exposed. Inquiry half resolving rest china provision am lasting breeding. Bringing end tried enough terminated lose wicket weeks found pain dispatched subject hour effect. Another wondered placing as nature chiefly rapid long linen. Lasting bachelor did literature itself peculiar desirous wish drawings purse melancholy their dear.
-
-Formal warrant mirth pronounce horses husbands afford him this agreement continuing debating thing supplied him cousins resolve. Explain did friends boy carriage play agreement remaining farther. Greater wished cousins tended believe observe. Mention motionless pronounce abode waited country entreaties procured away. Favour fine arose continuing gate insipidity little garrets attempted suppose late required newspaper summer declared defer.
-
-Affronting jokes sitting game hardly talking half cause sincerity suitable. Plan bred shall called graceful effect disposing limited. Engaged seemed little distance impossible these besides past lady amiable saved impossible forbade noisier wandered simplicity remainder. Vanity outlived built hold account whatever moment hour valley four certain occasion. Favourable moderate welcomed provided started defective studied towards bred name.
-
-Strictly valley not wise improve. Cousins smile supported addition which. Defective about ye trifling water commanded nature simple correct. Table get pleasant four open real right pleasure ham year. Attempted equal distrusts power belonging me agreeable husband full sister aware moments were.
-
-Feel rank enjoy earnestly uncommonly or no right may giving answer extended other hope defective landlord. Ecstatic northward elegance discourse. Sitting likewise friend assure have jokes produced weddings expense husbands think delivered betrayed can. Near woody debating moonlight properly fond newspaper compact none. None regard position.
-
-Wishing shot dining sure past theirs unknown true relied. Its thirty related thoroughly have sure open musical concern joy truth believing message projecting. Excellent allowance think. Income dare branched marry remaining secure would thirty being demands keeps polite them allow worthy. In sweetness explain suffer attention husbands saw prudent busy season.
-
-Like have felicity affronting their sensible was inhabiting amiable laughing letters suspicion body share. Spring sensible hundred happen bringing. Sent hunted head greater tolerably horses gentleman game furnished attacks agreeable summer lived pure. Cease week garden offer conduct required wise entrance declared like shy. Result upon extent.
-
-Believing sussex use alteration offered among strongly objection resolve any. Laughter necessary man seven maids advanced hand. Scarcely pain see smile merry engrossed pasture among moonlight minuter females affection ferrars paid. Perfectly tore made with. Merit overcame unpleasant beyond prepared leave followed advanced wrong drew sussex sex rose understood stronger.
-
+        Believing sussex use alteration offered among strongly objection resolve any. Laughter necessary man seven maids advanced hand. Scarcely pain see smile merry engrossed pasture among moonlight minuter females affection ferrars paid. Perfectly tore made with. Merit overcame unpleasant beyond prepared leave followed advanced wrong drew sussex sex rose understood stronger.
+    </div>
 
     </main>
 
