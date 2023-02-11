@@ -79,7 +79,7 @@
 
 /**
  * Скрытый чекбокс (флажок)
- * невидим и недоступен :)
+ * невидим и недоступен
  * имя селектора атрибут флажка
  */
 
@@ -352,7 +352,7 @@ body {
     bottom: 0;
     height: 1px;
     width: 100%;
-    background: #3bc1a0;
+    background: #00F4FF;
     -webkit-transition: width .5s ease;
     transition: width .5s ease;
 }

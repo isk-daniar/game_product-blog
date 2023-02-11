@@ -48,6 +48,7 @@
     height: 40px;
     justify-content: left;
     margin-bottom: 24px;
+    margin-right: 16px;
     margin-left: 16px;
     margin-top: 12px;
     min-width: 98px;
@@ -69,6 +70,9 @@
     border: 1px solid #FF7600;
     color: #FF7600;
 }
+.crt_bt_cl:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
 .ps-bt-menu{
     position: absolute;
     top: 0;
@@ -86,8 +90,15 @@
     line-height: 20px;
 }
 .crt-bt-icon{
-
+    color: #FF7600;
+}
+.crt-bt-icon:hover{
+    color: #FF7600;
 }
 .crt-bt-text{
-    padding-left: 10px
+    padding-left: 10px;
+    color: #FF7600;
+}
+.crt-bt-text:hover{
+    color: #FF7600;
 }

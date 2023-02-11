@@ -17,8 +17,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/gbase-style.css' %}">
     <link rel="stylesheet" href="{% static 'css/blog/qblog_post-style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/blog/blog-post-edited_style/ablog-post-edited.css' %}">
-    <link rel="stylesheet" href="{% static 'css/blog/left-slide-panel/zleft-nav-style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blog/blog-post-edited_style/dblog-post-edited.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blog/bp-forms-style/aleft-nav-style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blog/bp-forms-style/abp-crt-wd.css' %}">
     {% block link %}{% endblock %}
     <!-- FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap&subset=cyrillic" rel="stylesheet">
@@ -62,16 +63,18 @@
                     </h2>
                     <ul>
                         <div class="main_crt_bt_menu crt-dt-menu crt_bt_cl">
-                            <div class="ps-bt-menu"></div>
-                            <span class="crt-span-bt">
-                                <span class="crt-item-bt">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square crt-bt-icon" viewBox="0 0 16 16">
-                                      <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                                      <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                                    </svg>
-                                    <span class="crt-bt-text">new blog</span>
+                            <a href="#win1">
+                                <div class="ps-bt-menu"></div>
+                                <span class="crt-span-bt">
+                                    <span class="crt-item-bt">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square crt-bt-icon" viewBox="0 0 16 16">
+                                          <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                          <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                        </svg>
+                                        <span class="crt-bt-text">new blog</span>
+                                    </span>
                                 </span>
-                            </span>
+                            </a>
                         </div>
                         <li><a href="#1">Один</a>
                         <li><a href="#2">Два</a>
@@ -82,6 +85,22 @@
                         <li><a href="#7">Семь</a>
                     </ul>
                 </nav>
+        <a href="#win1" class="btn">Открыть окно 1</a>
+                <div class="dm-overlay" id="win1">
+                    <div class="dm-table">
+                        <div class="dm-cell">
+                            <div class="dm-modal">
+                                <a href="#close" class="close"></a>
+                                <h3>Модальный блок №1 абсолютно по центру.</h3>
+                                <div class="pl-left">
+                                    <img src="http://lorempixel.com/320/320/people/some-text">
+                                </div>
+                                <p>Окно выводится строго по центру, по горизонтали и по вертикали, внутри контейнера с относительным позиционированием. В данном примере показана возможность использования встроенных миниатюр, разположенных слева в div-контейнере с выделенным классом <code>.pl-left</code></p>
+                                <p>Размер блока миниатюр определил в 25% от родительского контейнера, тем самым обеспечив возможность пропорционального изменения, при просмотре на экранах различных пользовательских устройств.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         Family agreement reasonably rent girl little burst visited begin arrived.
 
 Conveying terms painful misery summer cousins colonel mile ham tore discretion cousins elsewhere points play itself. Living after men cease pretty any branched soon though sitting dinner moment. Leaf sold relation timed above. Eat delivered walk plan northward offered promise chiefly green read edward departure by. Water existence chief though head settle.
