@@ -1,8 +1,8 @@
-.dm-overlay:target {
+.bp-overlay:target {
     display: block;
     animation: fade .6s;
 }
-.dm-overlay {
+.bp-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -11,25 +11,28 @@
     overflow: auto;
     width: 100%;
     height: 100%;
-    z-index: 1000;
+    z-index: 5000;
 }
-.dm-table {
+.bp-table {
     display: table;
     width: 100%;
     height: 100%;
 }
-.dm-cell {
+.bp-cell {
     display: table-cell;
     padding: 0 1em;
     vertical-align: middle;
     text-align: center;
 }
-.dm-modal {
+.bp-modal {
     display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 425px;
     padding: 20px;
     max-width: 50em;
-    background: #607d8b;
-    box-shadow: 0px 15px 20px rgb(0 0 0 / 22%), 0px 19px 60px rgb(0 0 0 / 30%);
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.7);
     color: #cfd8dc;
     text-align: left;
 }

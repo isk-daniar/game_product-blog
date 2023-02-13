@@ -12,6 +12,9 @@ class AddPostBlogForm(forms.ModelForm):
     class Meta:
         model = PostBlog
         fields = ['name', 'slug', 'description', 'image', 'category']
+        widgets = {
+            'name': forms.TextInput(attrs={'width': 380}),
+        }
 
 
 

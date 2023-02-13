@@ -1,4 +1,4 @@
-.header-gp{
+.header-gp-fixed{
     position: fixed;
     top: 0;
 }
@@ -18,7 +18,7 @@
     background-color: rgb(255, 255, 255);
     border-bottom: 1px solid rgb(236, 239, 241);
 }
-.d1 input {
+.bp-menu-search input {
   width: 600px;
   height: 42px;
   padding-left: 10px;
@@ -27,7 +27,7 @@
   background-color: rgba(255, 255, 255);
   color: rgba(0, 0, 0);
 }
-.d1 button {
+.bp-menu-search button {
   position: absolute;
   width: 42px;
   height: 42px;
@@ -35,7 +35,7 @@
   background-color: rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
-.d1 button:before {
+.bp-menu-search button:before {
   content: "\f002";
   font-family: FontAwesome;
   font-size: 16px;
@@ -101,4 +101,60 @@
 }
 .crt-bt-text:hover{
     color: #FF7600;
+}
+
+/* crt-forms */
+.bp-inp-form{
+    min-height: 200px;
+}
+.bp-inp-form-5{
+    min-height: 191px;
+}
+.bp-inp{
+    padding-top: 24px;
+}
+.bp-inp input{
+    width: 380px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    color: rgb(255, 255, 255);
+}
+.bp-bt-rh{
+    display: flex;
+    justify-content: flex-end;
+}
+.bp-bt-next{
+    line-height: 20px;
+}
+.bp-bt-item{
+    line-height: 20px;
+    min-width: 88px;
+}
+.bp-bt-item-5{
+    min-width: 88px;
+    margin-top: 5px;
+}
+.bp-bt-back{
+    line-height: 20px;
+    min-width: 258px;
+}
+.bp-bt-back-5{
+    margin-top: 5px;
+    min-width: 238px;
+}
+.bp-bt-post {
+    border: 1px solid #FF7600;
+}
+.bp-bt-post button{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #FF7600;
+    padding-top: 1px !important;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    border-top-width: 0px;
+}
+.crt-forms-title{
+    padding: 16px 16px 0;
 }

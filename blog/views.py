@@ -26,20 +26,23 @@ class BlogCategory(ListView):
     model = Category
     template_name = "blog/list_categories.html"
 
-class BlogMenuView(ListView):
+# class PostBlog
+class BlogMenuView(CreateView):
+    form_class = AddPostBlogForm
     model = PostBlog
     template_name = "blog/blogpost_edited/blog_create_menu.html"
-
-# class PostBlog
-class AddPostBlog(CreateView):
-    form_class = AddPostBlogForm
-    template_name = "blog/blogpost_edited/blogpost_create.html"
-    success_url = reverse_lazy('blogpost_create')
+    success_url = reverse_lazy('blog_menu')
     exclude = ['user']
 
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)
+
+    def get_context_data(self, **kwargs):
+        return dict(
+            super(BlogMenuView, self).get_context_data(**kwargs),
+            pb_list=PostBlog.objects.all()
+        )
 
 # class ExpandPost
 class AddExpandPost(CreateView):
