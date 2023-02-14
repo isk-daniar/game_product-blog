@@ -3,5 +3,6 @@ django-editorjs-fields
 django-editorjs
 django-mptt
 djoser
+psycopg2
 psycopg2-binary
 Pillow
