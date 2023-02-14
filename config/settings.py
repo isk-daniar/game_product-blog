@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_framework',
     'django_editorjs_fields',
-    'ckeditor',
 
     'blog',
     'gp_users',
@@ -90,10 +89,6 @@ DATABASES = {
     'PASSWORD': 'Sebase231.',
     'HOST': 'localhost',
     'PORT': '5432',
-    'OPTIONS': {
-        'service': 'my_service',
-        'passfile': '.pgpass',
-    },
     }
 }
 
@@ -145,7 +140,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CKEDITOR_UPLOAD_PATH = "uploads/"
 
 REST_FRAMEWORK = {
 
