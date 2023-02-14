@@ -1,1 +1,1 @@
-localhost:5432:NAME:USER:PASSWORD
+localhost:5432:my_service:postgres:Sebase231.

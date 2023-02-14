@@ -84,11 +84,16 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
 'default': {
     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+
     'NAME': 'GameProduct_db',
     'USER': 'postgres',
     'PASSWORD': 'Sebase231.',
     'HOST': 'localhost',
-    'PORT': '5432'
+    'PORT': '5432',
+    'OPTIONS': {
+        'service': 'my_service',
+        'passfile': '.pgpass',
+    },
     }
 }
 
