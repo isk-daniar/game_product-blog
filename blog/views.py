@@ -30,7 +30,7 @@ class BlogCategory(ListView):
 class BlogMenuView(CreateView):
     form_class = AddPostBlogForm
     model = PostBlog
-    template_name = "blog/blogpost_edited/blog_create_menu.html"
+    template_name = "blog/blogpost_edited/blog_post_create.html"
     success_url = reverse_lazy('blog_menu')
     exclude = ['user']
 
