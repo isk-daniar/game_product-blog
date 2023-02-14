@@ -86,7 +86,7 @@ DATABASES = {
 
     'NAME': 'GameProduct_db',
     'USER': 'postgres',
-    'PASSWORD': 'Sebase231.',
+    'PASSWORD': 'sebase231',
     'HOST': 'localhost',
     'PORT': '5432',
     }
