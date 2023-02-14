@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_framework',
     'django_editorjs_fields',
-    'ckeditor',
 
     'blog',
     'gp_users',
@@ -84,16 +83,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
 'default': {
     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-
     'NAME': 'GameProduct_db',
     'USER': 'postgres',
-    'PASSWORD': 'Sebase231.',
+    'PASSWORD': 'sebase231',
     'HOST': 'localhost',
     'PORT': '5432',
-    'OPTIONS': {
-        'service': 'my_service',
-        'passfile': '.pgpass',
-    },
     }
 }
 
@@ -145,7 +139,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CKEDITOR_UPLOAD_PATH = "uploads/"
 
 REST_FRAMEWORK = {
 
