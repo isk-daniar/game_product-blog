@@ -83,7 +83,6 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
 'default': {
     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-
     'NAME': 'GameProduct_db',
     'USER': 'postgres',
     'PASSWORD': 'sebase231',
