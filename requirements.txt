@@ -1,4 +1,5 @@
 djangorestframework
+django-ckeditor
 django-editorjs-fields
 django-editorjs
 django-mptt
