@@ -23,3 +23,8 @@
     color: #f4f4f4;
 }
 /* close back-bt */
+.ep-edtorjs-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
