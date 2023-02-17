@@ -88,6 +88,8 @@ display: inline-block;
   display:block;
   margin-left:auto;
   margin-right:auto;
+  padding-bottom: 25px;
+  padding-top: 15px;
 }
 /* < --- > */
 .post-nav {

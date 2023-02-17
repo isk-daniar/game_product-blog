@@ -95,7 +95,7 @@ $(window).scroll(function() {
         $(this).css('background-position', 'center ' + position)
     })
 })
-
+/* title animation */
 let typed = new Typed('#typed', { // Тут id того блока, в которм будет анимация
     stringsElement: '#typed-strings', // Тут id блока из которого берем строки для анимации
     typeSpeed: 100, // Скорость печати
@@ -114,3 +114,13 @@ $(".element").typed({
     attr: null, // Атрибут
     callback: function(){ } // Функция вызываемая после окончания работы плагина
 });
+
+/* */
+function blogBackLink() {
+    document.getElementById('blogLink').href
+        ="http://127.0.0.1:8000/";
+
+    document.getElementById("blogLink")
+        .textContent = "Back to blog post";
+}
+/* */
