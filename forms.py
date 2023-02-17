@@ -22,7 +22,6 @@ class AddExpandPostForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['postblog'].empty_label = "No blog selected"
-        self.fields['name'].empty_label = "No blog selected"
 
     class Meta:
         model = ExpandPost

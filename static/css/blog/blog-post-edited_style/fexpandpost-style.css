@@ -25,6 +25,7 @@
     color: #f4f4f4;
 }
 /* close back-bt */
+
 .ep-edtorjs-form{
   display: flex;
   align-items: center;
@@ -35,15 +36,30 @@
     width: 600px;
     background-color: rgba(0, 0, 0, 0.8);
     color: rgb(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid #FF7600;
 }
 .ep-postblog-form select{
     height: 30px;
     background-color: rgba(0, 0, 0, 0.8);
     color: rgb(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid #FF7600;
 }
 .ep-title-text{
     position: absolute;
     top: 104px;
     padding-left: 10px;
     letter-spacing: 3px;
+}
+/* publish-bt*/
+.ep-post-bt{
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid #FF7600;
+}
+.ep-post-bt button{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #FF7600;
+    border-bottom-width: 0px;
+    border-top-width: 0px;
 }
