@@ -9,7 +9,7 @@ class ExpandInline(admin.StackedInline):
 
 @admin.register(models.PostBlog)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ["name", "category", "create_at"]
+    list_display = ["name", "user", "category", "create_at"]
     inlines = [ExpandInline]
 
 @admin.register(models.ExpandPost)
