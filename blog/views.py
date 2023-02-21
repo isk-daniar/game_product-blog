@@ -1,3 +1,5 @@
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView
 
@@ -27,6 +29,16 @@ class BlogCategory(ListView):
     template_name = "blog/list_categories.html"
 
 # class PostBlog
+def blog_form(request):
+    form = AddPostBlogForm()
+    if request.method == 'POST':
+        form = AddPostBlogForm(request.POST, request.FILES)
+        form.instance.user = request.user
+
+        if form.is_valid():
+            form.save()
+        return redirect('blog_menu')
+
 class BlogMenuView(CreateView):
     form_class = AddPostBlogForm
     model = PostBlog
@@ -43,6 +55,8 @@ class BlogMenuView(CreateView):
             super(BlogMenuView, self).get_context_data(**kwargs),
             pb_list=PostBlog.objects.all()
         )
+
+
 
 # class ExpandPost
 class AddExpandPost(CreateView):
