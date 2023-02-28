@@ -8,7 +8,7 @@ services:
     ports:
       - 8000:8000
     environment:
-       POSTGRES_DB: "GameProduct_db"
+       POSTGRES_NAME: "GameProduct_db"
        POSTGRES_USER: "postgres"
        POSTGRES_PASSWORD: "postgres"
     depends_on:
