@@ -2,6 +2,7 @@ djangorestframework
 django-ckeditor
 django-editorjs-fields
 django-editorjs
+django-environ
 django-mptt
 djoser
 psycopg2
