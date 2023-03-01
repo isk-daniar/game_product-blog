@@ -53,7 +53,7 @@ class BlogMenuView(CreateView):
     def get_context_data(self, **kwargs):
         return dict(
             super(BlogMenuView, self).get_context_data(**kwargs),
-            pb_list=PostBlog.objects.all()
+            pb_list=PostBlog.objects.filter(user=self.request.user)
         )
 
 
