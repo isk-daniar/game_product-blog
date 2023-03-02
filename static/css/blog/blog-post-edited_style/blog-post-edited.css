@@ -10,6 +10,11 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+.box-black{
+    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+}
+
 /* search */
 .main_blog_menu{
     bottom: auto;
@@ -213,6 +218,7 @@
     flex-direction: row;
     position: relative;
 }
+/* my-bp-box */
 .my-bp-box{
     display: flex;
     flex: 1;
@@ -220,4 +226,28 @@
     flex-direction: column;
     padding-left: 16px;
     width: calc(100% - 72px);
+}
+.bp-box-title-user{
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    height: 32px;
+}
+.bp-box-title-item{
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.bp-box-title{
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.bp-box-user-item{
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    margin: 0 0 0 auto;
+    z-index: 2;
 }
