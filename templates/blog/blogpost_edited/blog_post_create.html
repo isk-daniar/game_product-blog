@@ -142,24 +142,33 @@
                     <div class="my_blog-post-list">
                         <div class="my-blog-post-items">
                             <div class="my-blog-post-item my-bp-border">
-                                <div class="my-blog-post">
-                                    <div class="my-bp-img">
-                                        <a href="{{ postblog.get_absolute_url }}">
+                                <a href="{{ postblog.get_absolute_url }}">
+                                    <div class="my-blog-post">
+                                        <div class="my-bp-img">
                                             <img class="box-shadow" src="{{ postblog.image.url }}" >
-                                        </a>
-                                    </div>
-                                    <div class="my-bp-box ">
-                                        <div class="box-black">
-                                            <a href="{{ postblog.get_absolute_url }}">
-                                                <span class="">{{ postblog.category }}</span>
-                                            </a>
-                                            <a href="{{ postblog.get_absolute_url }}">
-                                                <span>{{ postblog.name }}</span>
-                                            </a>
-                                        <time datetime="">{{ postblog.create_at|date:"M d, Y" }}</time>
+                                        </div>
+                                        <div class="my-bp-box ">
+                                            <div class="box-black">
+                                                <div class="bp-box-category">
+                                                        <span class="">{{ postblog.category }}</span>
+                                                </div>
+                                                <div class="bp-box-title-user">
+                                                    <div class="bp-box-title-item">
+                                                        <div class="bp-box-title">
+                                                            <span>{{ postblog.name }}</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="bp-box-user-item">
+                                                        <div class="bp-box-user">
+                                                            <span>{{ postblog.user }}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <time datetime="">{{ postblog.create_at|date:"M d, Y" }}</time>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -168,27 +177,36 @@
 
             {% for postblog in pb_list %}
                 {% if forloop.first <= 10 and forloop.counter > 1 %}
-                    <div class="my_blog-post-list">
+                     <div class="my_blog-post-list">
                         <div class="my-blog-post-items">
                             <div class="my-blog-post-item my-bp-border">
-                                <div class="my-blog-post">
-                                    <div class="my-bp-img">
-                                        <a href="{{ postblog.get_absolute_url }}">
+                                <a href="{{ postblog.get_absolute_url }}">
+                                    <div class="my-blog-post">
+                                        <div class="my-bp-img">
                                             <img class="box-shadow" src="{{ postblog.image.url }}" >
-                                        </a>
-                                    </div>
-                                    <div class="my-bp-box ">
-                                        <div class="box-black">
-                                            <a href="{{ postblog.get_absolute_url }}">
-                                                <span class="">{{ postblog.category }}</span>
-                                            </a>
-                                            <a href="{{ postblog.get_absolute_url }}">
-                                                <span>{{ postblog.name }}</span>
-                                            </a>
-                                        <time datetime="">{{ postblog.create_at|date:"M d, Y" }}</time>
+                                        </div>
+                                        <div class="my-bp-box ">
+                                            <div class="box-black">
+                                                <div class="bp-box-category">
+                                                        <span class="">{{ postblog.category }}</span>
+                                                </div>
+                                                <div class="bp-box-title-user">
+                                                    <div class="bp-box-title-item">
+                                                        <div class="bp-box-title">
+                                                            <span>{{ postblog.name }}</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="bp-box-user-item">
+                                                        <div class="bp-box-user">
+                                                            <span>{{ postblog.user }}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <time datetime="">{{ postblog.create_at|date:"M d, Y" }}</time>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
