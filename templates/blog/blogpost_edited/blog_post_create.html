@@ -139,36 +139,42 @@
         <div class="my_bp-list-header-menu">
             {% for postblog in pb_list %}
                 {% if forloop.first %}
-                    <div class="my_blog-post-list">
+                     <div class="my_blog-post-list">
                         <div class="my-blog-post-items">
                             <div class="my-blog-post-item my-bp-border">
-                                <a href="{{ postblog.get_absolute_url }}">
-                                    <div class="my-blog-post">
-                                        <div class="my-bp-img">
-                                            <img class="box-shadow" src="{{ postblog.image.url }}" >
-                                        </div>
-                                        <div class="my-bp-box ">
-                                            <div class="box-black">
-                                                <div class="bp-box-category">
-                                                        <span class="">{{ postblog.category }}</span>
-                                                </div>
-                                                <div class="bp-box-title-user">
-                                                    <div class="bp-box-title-item">
-                                                        <div class="bp-box-title">
-                                                            <span>{{ postblog.name }}</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="bp-box-user-item">
-                                                        <div class="bp-box-user">
-                                                            <span>{{ postblog.user }}</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <time datetime="">{{ postblog.create_at|date:"M d, Y" }}</time>
+                                <div class="my-blog-post">
+                                    <div class="my-bp-img">
+                                        <img class="box-shadow" src="{{ postblog.image.url }}" >
+                                    </div>
+                                    <div class="my-bp-box ">
+                                        <div class="box-black box-black-add">
+                                            <div class="bp-box-category">
+                                                    <span class="">{{ postblog.category }}</span>
                                             </div>
+                                            <div class="bp-box-title-user">
+                                                <div class="bp-box-title-item">
+                                                    <div class="bp-box-title">
+                                                        <span>{{ postblog.name }}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="bp-box-user-item">
+                                                    <div class="bp-box-users">
+                                                      <ul class="bp-box-user">
+                                                        <li><span>{{ postblog.user }}</span>
+                                                          <ul class="user-submenu">
+                                                            <li class="user-submenu-item"><a href="">Item 1</a></li>
+                                                            <li class="user-submenu-item"><a href="">Item 2</a></li>
+                                                          </ul>
+                                                        </li>
+                                                      </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <time datetime="">{{ postblog.create_at|date:"M d, Y" }}</time>
                                         </div>
                                     </div>
-                                </a>
+                                </div>
+                                <div class="bp-box-href"><a href="{{ postblog.get_absolute_url }}"></a></div>
                             </div>
                         </div>
                     </div>
@@ -180,33 +186,39 @@
                      <div class="my_blog-post-list">
                         <div class="my-blog-post-items">
                             <div class="my-blog-post-item my-bp-border">
-                                <a href="{{ postblog.get_absolute_url }}">
-                                    <div class="my-blog-post">
-                                        <div class="my-bp-img">
-                                            <img class="box-shadow" src="{{ postblog.image.url }}" >
-                                        </div>
-                                        <div class="my-bp-box ">
-                                            <div class="box-black">
-                                                <div class="bp-box-category">
-                                                        <span class="">{{ postblog.category }}</span>
-                                                </div>
-                                                <div class="bp-box-title-user">
-                                                    <div class="bp-box-title-item">
-                                                        <div class="bp-box-title">
-                                                            <span>{{ postblog.name }}</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="bp-box-user-item">
-                                                        <div class="bp-box-user">
-                                                            <span>{{ postblog.user }}</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <time datetime="">{{ postblog.create_at|date:"M d, Y" }}</time>
+                                <div class="my-blog-post">
+                                    <div class="my-bp-img">
+                                        <img class="box-shadow" src="{{ postblog.image.url }}" >
+                                    </div>
+                                    <div class="my-bp-box ">
+                                        <div class="box-black box-black-add">
+                                            <div class="bp-box-category">
+                                                    <span class="">{{ postblog.category }}</span>
                                             </div>
+                                            <div class="bp-box-title-user">
+                                                <div class="bp-box-title-item">
+                                                    <div class="bp-box-title">
+                                                        <span>{{ postblog.name }}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="bp-box-user-item">
+                                                    <div class="bp-box-users">
+                                                      <ul class="bp-box-user">
+                                                        <li><span>{{ postblog.user }}</span>
+                                                          <ul class="user-submenu">
+                                                            <li class="user-submenu-item"><a href="">Item 1</a></li>
+                                                            <li class="user-submenu-item"><a href="">Item 2</a></li>
+                                                          </ul>
+                                                        </li>
+                                                      </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <time datetime="">{{ postblog.create_at|date:"M d, Y" }}</time>
                                         </div>
                                     </div>
-                                </a>
+                                </div>
+                                <div class="bp-box-href"><a href="{{ postblog.get_absolute_url }}"></a></div>
                             </div>
                         </div>
                     </div>
