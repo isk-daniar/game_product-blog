@@ -116,11 +116,5 @@ $(".element").typed({
 });
 
 /* */
-function blogBackLink() {
-    document.getElementById('blogLink').href
-        ="http://127.0.0.1:8000/";
 
-    document.getElementById("blogLink")
-        .textContent = "Back to blog post";
-}
 /* */

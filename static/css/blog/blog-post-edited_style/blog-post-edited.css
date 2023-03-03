@@ -217,7 +217,6 @@
 .my-bp-border{
     border: 1px solid #cfd8dc;
     border-radius: 0px;
-    box-shadow: inset 0px 0px 6px 0px #fff;
 }
 .my-bp-img img{
     width: 120px;
@@ -258,5 +257,15 @@
     flex: 0 0 auto;
     flex-direction: row;
     margin: 0 0 0 auto;
-    z-index: 2;
+    z-index: 10;
 }
+.bp-box-href a{
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 5;
+}
+

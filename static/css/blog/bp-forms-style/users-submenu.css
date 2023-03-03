@@ -1,0 +1,16 @@
+.bp-box-user{
+  text-decoration: none;
+  outline: none;
+  list-style: none;
+}
+.bp-box-users .user-submenu {
+  display: none;
+}
+.bp-box-users ul li:hover .user-submenu {
+  display: block;
+  list-style: none;
+}
+.bp-box-user-item a{
+    z-index: 10;
+}
+
