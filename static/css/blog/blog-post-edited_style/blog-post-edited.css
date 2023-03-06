@@ -241,6 +241,15 @@
     flex-direction: row;
     height: 32px;
 }
+.bp-box-img{
+    padding-left: 5px;
+}
+.bp-box-icon{
+    width: 24px;
+    height: 24px;
+    border: 1px solid #cfd8dc;
+    border-radius: 50%;
+}
 .bp-box-title-item{
     overflow: hidden;
     text-align: left;

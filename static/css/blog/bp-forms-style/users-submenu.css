@@ -6,9 +6,13 @@
 .bp-box-users .user-submenu {
   display: none;
 }
-.bp-box-users ul li:hover .user-submenu {
-  display: block;
+.my-blog-post-item:hover .user-submenu {
+  display: flex;
+  flex-direction: row;
   list-style: none;
+}
+.my-blog-post-item:hover .bp-box-user span{
+    display: none;
 }
 .bp-box-user-item a{
     z-index: 10;
