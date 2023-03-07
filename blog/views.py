@@ -39,7 +39,7 @@ def blog_form(request):
             form.save()
         return redirect('blog_menu')
 
-class BlogMenuView(CreateView):
+class BlogCreateView(CreateView):
     form_class = AddPostBlogForm
     model = PostBlog
     template_name = "blog/blogpost_edited/blog_post_create.html"
@@ -52,14 +52,14 @@ class BlogMenuView(CreateView):
 
     def get_context_data(self, **kwargs):
         return dict(
-            super(BlogMenuView, self).get_context_data(**kwargs),
+            super(BlogCreateView, self).get_context_data(**kwargs),
             pb_list=PostBlog.objects.filter(user=self.request.user)
         )
 
 
 
 # class ExpandPost
-class AddExpandPost(CreateView):
+class ExpandPostCreateView(CreateView):
     form_class = AddExpandPostForm
     template_name = "blog/blogpost_edited/expandpost_create.html."
     success_url = reverse_lazy('expandpost_create')
