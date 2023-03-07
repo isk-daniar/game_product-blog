@@ -17,4 +17,8 @@
 .bp-box-user-item a{
     z-index: 10;
 }
+.user-submenu-item{
+    margin-right: 20px;
+    margin-left: 5px;
+}
 
