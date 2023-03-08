@@ -1,9 +1,8 @@
-from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView
 
-from .models import PostBlog, Category
+from .models import PostBlog, Category, ExpandPost
 from forms import AddPostBlogForm, AddExpandPostForm
 
 
@@ -60,8 +59,17 @@ class BlogCreateView(CreateView):
 
 # class ExpandPost
 class ExpandPostCreateView(CreateView):
+    model = ExpandPost
     form_class = AddExpandPostForm
     template_name = "blog/blogpost_edited/expandpost_create.html."
     success_url = reverse_lazy('expandpost_create')
+
+class ExpandPostUpdateView(UpdateView):
+    model = ExpandPost
+    form_class = AddExpandPostForm
+    template_name = "blog/blogpost_edited/expandpost_update.html."
+    success_url = reverse_lazy('expandpost_update')
+
+
 
 
