@@ -12,8 +12,8 @@ urlpatterns = [
     path('api/v1/blogmenu/', views.BlogCreateView.as_view(), name='blog_menu'),
     # class ExpandPost
     path('api/v1/ep/', views.ExpandPostCreateView.as_view(), name='expandpost_create'),
-    # path('api/v1/ep/<int:pk>/', ExpandPostAPIUpdate.as_view()),
-    # path('api/v1/epdelete/<int:pk>', ExpandPostAPIDestaroy.as_view()),
+    path('api/v1/ep/update/<slug:slug>/', views.ExpandPostUpdateView.as_view(), name='expandpost_update'),
+
 
 
 ]
