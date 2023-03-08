@@ -52,6 +52,7 @@ class PostBlog(models.Model):
 class ExpandPost(models.Model):
     name = models.CharField(max_length=100)
     create_at = models.DateTimeField(auto_now_add=True)
+    slug = models.SlugField(max_length=200, default="")
     postblog = models.ForeignKey(
         PostBlog,
         related_name="expandpostblog",

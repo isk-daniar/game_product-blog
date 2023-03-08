@@ -1,23 +1,25 @@
-.ep-main{
+.ep-main {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 1170px;
 }
-.ep-tsp{
+.ep-tsp {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding-top: 30px;
+    justify-content: center;
+    padding-top: 20px;
 }
-
+.ep-tsp-item {
+    padding-left: 21px;
+    padding-right: 21px;
+}
 /* back-bt*/
-.ep-bk-bt{
+.ep-bk-bt {
     position: fixed;
     top: 0;
     z-index: 4001;
 }
-.ep-bk-img{
+.ep-bk-img {
     height: 46px;
     width: 46px;
 }
@@ -25,39 +27,59 @@
     color: #f4f4f4;
 }
 /* close back-bt */
+.ep-title-item {
+    padding-top: 30px;
+}
+.ep-title-form {
+    display: flex;
+    justify-content: center;
+}
 
-.ep-edtorjs-form{
+.ep-title-text {
+    position: absolute;
+    top: 104px;
+    padding-left: 10px;
+    letter-spacing: 3px;
+}
+.ep-edtorjs-form {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 36px 0 36px;
 }
-.ep-title-form input{
-    width: 600px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: rgb(255, 255, 255);
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    border-bottom: 1px solid #FF7600;
-}
-.ep-postblog-form select{
+.ep-title-form input {
+    width: 900px;
     height: 30px;
     background-color: rgba(0, 0, 0, 0.8);
     color: rgb(255, 255, 255);
     border: 1px solid rgba(255, 255, 255, 0.7);
     border-bottom: 1px solid #FF7600;
 }
-.ep-title-text{
-    position: absolute;
-    top: 104px;
-    padding-left: 10px;
-    letter-spacing: 3px;
+.ep-postblog-form select {
+    width: 350px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid #FF7600;
 }
+.ep-slug-form input {
+    width: 350px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid #FF7600;
+}
+
 /* publish-bt*/
-.ep-post-bt{
+.ep-post-bt {
+    width: 116px;
+    height: 30px;
     background-color: rgba(0, 0, 0, 0.8);
     border: 1px solid #FF7600;
 }
-.ep-post-bt button{
+.ep-post-bt button {
     background-color: rgba(0, 0, 0, 0.8);
     color: #FF7600;
     border-bottom-width: 0px;

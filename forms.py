@@ -25,7 +25,7 @@ class AddExpandPostForm(forms.ModelForm):
 
     class Meta:
         model = ExpandPost
-        fields = ['name', 'postblog', 'body_editorjs']
+        fields = ['name', 'slug', 'postblog', 'body_editorjs']
         exclude = []
         widgets = {
             'body_editorjs': EditorJsWidget(config={'minHeight': 100}),
