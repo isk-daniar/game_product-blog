@@ -56,18 +56,21 @@ class BlogCreateView(CreateView):
         )
 
 
-
 # class ExpandPost
+class ExpandPostListView(ListView):
+    model = ExpandPost
+    template_name = "blog/"
+
 class ExpandPostCreateView(CreateView):
     model = ExpandPost
     form_class = AddExpandPostForm
-    template_name = "blog/blogpost_edited/expandpost_create.html."
+    template_name = "blog/blogpost_edited/expandpost_create.html"
     success_url = reverse_lazy('expandpost_create')
 
 class ExpandPostUpdateView(UpdateView):
     model = ExpandPost
     form_class = AddExpandPostForm
-    template_name = "blog/blogpost_edited/expandpost_update.html."
+    template_name = "blog/blogpost_edited/expandpost_update.html"
     success_url = reverse_lazy('expandpost_update')
 
 

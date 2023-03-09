@@ -1,4 +1,4 @@
-.bp-box-user{
+.bp-box-user {
   text-decoration: none;
   outline: none;
   list-style: none;
@@ -11,13 +11,13 @@
   flex-direction: row;
   list-style: none;
 }
-.my-blog-post-item:hover .bp-box-user span{
+.my-blog-post-item:hover .bp-box-user span {
     display: none;
 }
-.bp-box-user-item a{
+.bp-box-user-item a {
     z-index: 10;
 }
-.user-submenu-item{
+.user-submenu-item {
     margin-right: 20px;
     margin-left: 5px;
 }

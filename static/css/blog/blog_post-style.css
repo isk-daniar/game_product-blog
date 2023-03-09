@@ -1,6 +1,6 @@
 /* blog-post */
 
-.blog-post_fiter{
+.blog-post_fiter {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -12,7 +12,7 @@
 	padding-top: 94px;
 	padding-bottom: 52px
 }
-.blog-post_button_filter{
+.blog-post_button_filter {
 	width: 100%;
 	list-style: none;
 	margin: 0;
@@ -22,7 +22,7 @@
 	justify-content: center;
 	margin-bottom: 60px;
 }
-.blog-post_link{
+.blog-post_link {
 	position: relative;
 	color: rgb(255,255,255);
     left: 45px;
@@ -34,10 +34,10 @@
 	opacity: 0.7;
 }
 /* button-more */
-.dropdown-menu{
+.dropdown-menu {
     background-color: rgba(0,0,0,0.5);
 }
-.blog-more-link{
+.blog-more-link {
 	position: relative;
 	color: rgb(255,255,255);
 	padding: 10%;
@@ -47,7 +47,7 @@
 	text-decoration: none;
 	opacity: 0.7;
 }
-.post-blog_list{
+.post-blog_list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -62,7 +62,7 @@
 
 /* blog-post-content */
 
-.main_blog-post-content{
+.main_blog-post-content {
     max-width: 1249px;
     position: relative;
     margin-right: auto;
@@ -70,25 +70,25 @@
     padding-left: 15px;
     padding-right: 15px;
 }
-.post-blog_content{
+.post-blog_content {
     margin-left: -15px;
     margin-right: -15px;
 }
-.post-preview{
+.post-preview {
     padding: 0;
     margin-bottom: 20px;
     border: 1px solid transparent;
     border-radius: 0px;
     box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
 }
-.box-black{
+.box-black {
 background-color: rgba(0,0,0,0.5);
 }
 .post-wrapper{
     position: relative;
 }
 
-.img-post{
+.img-post {
     display: inline-block;
     max-width: 100%;
     height: 267px;
@@ -97,13 +97,13 @@ background-color: rgba(0,0,0,0.5);
     padding: 0;
     border: 1px solid #3a3a3a;
 }
-.box-shadow{
+.box-shadow {
     box-shadow: 0 0 10px #000;
 }
 .text-medium {
     font-size: 150%;
 }
-.post-excerpt{
+.post-excerpt {
         min-height: 122px;
 }
 .text-muted {
@@ -128,15 +128,14 @@ box-shadow: 0 0 0 0.25rem rgb(255 255 255 / 0%);
   .col-sm-12 {
     float: left;
   }
-.col-sm-9{
+.col-sm-9 {
     width: 75%;
 }
-.col-sm-3{
+.col-sm-3 {
     width: 25%;
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
-}
 }
 
 @media (min-width: 1200px) {
