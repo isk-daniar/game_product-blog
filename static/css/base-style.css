@@ -49,26 +49,26 @@ body {
 	text-decoration: none;
 	overflow-x: hidden;
 }
-a{
+a {
     text-decoration: none;
     outline: 0;
     color: #fff;
     transition: all 0.5s;
 }
-a:hover{
+a:hover {
     color: #00F4FF;
 }
 .main {
 	flex-grow: 1;
 }
-.main_intro_bg-color{
+.main_intro_bg-color {
 	background-color: #e0e0e0;
 }
 img {
     vertical-align: middle;
 }
 /* header-gp */
-.header-gp{
+.header-gp {
     width: 100%;
     min-width: 320px;
     background-color: rgba(100, 100, 100, 0.7);
@@ -89,13 +89,13 @@ img {
     margin: 0;
     padding: 0;
 }
-.gp-header-logo-wrapper{
+.gp-header-logo-wrapper {
     margin: 0;
     padding: 0;
     font-size: 0;
     text-align: left;
 }
-.gp-header-nav-center{
+.gp-header-nav-center {
 	box-sizing: border-box;
 	display: flex;
 	align-items: stretch;
@@ -104,19 +104,19 @@ img {
 	margin: 0 auto;
 	min-height: 50px;
 }
-.gp-header-nav-items{
+.gp-header-nav-items {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: stretch;
 }
-.gp-header-nav-item{
+.gp-header-nav-item {
 	display: flex;
 	align-items: stretch;
 	justify-content: center;
 	min-height: 50px;
 	transition: background 0.5s;
 }
-.gp-header-nav-item-button{
+.gp-header-nav-item-button {
 	display: flex;
 	align-items: center;
 	padding: 0 15px;
@@ -124,18 +124,18 @@ img {
 	font-size: 14px;
 	text-decoration: none;
 }
-.gp-header-nav-item-button:hover{
+.gp-header-nav-item-button:hover {
 background-color: rgba(0,0,0,0.5);
 }
-.gp-header-aside{
+.gp-header-aside {
     width: 150px;
 }
-.gp-header-aside-items{
+.gp-header-aside-items {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-.gp-header-login-button{
+.gp-header-login-button {
     color: #FF7600;
     border: 1px solid #FF7600;
     line-height: 2;
@@ -145,11 +145,11 @@ background-color: rgba(0,0,0,0.5);
     transition: background .5s;
     text-transform: uppercase;
 }
-.gp-header-login-button:hover{
+.gp-header-login-button:hover {
     color: #FF7600;
     background: black;
 }
-.gp-user-name{
+.gp-user-name {
     color: #FF7600;
     transition: color .5s;
     text-overflow: ellipsis;
@@ -161,20 +161,20 @@ background-color: rgba(0,0,0,0.5);
     font-size: 1em;
 
 }
-.gp-user-name:hover{
+.gp-user-name:hover {
     color: #FF7600;
 }
-.gp-header-icon{
+.gp-header-icon {
     margin-left: 10px;
     padding-left: 10px;
     border-left: 1px solid hsla(0,0%,100%,.14);
     vertical-align: middle;
 }
-.gp-header-dropdown-menu{
+.gp-header-dropdown-menu {
     border-top: 2px solid #FF7600;
 
 }
-.gp-header-nav-item-button-at{
+.gp-header-nav-item-button-at {
     display: block;
     text-align: center;
     color: rgb(255,255,255);
@@ -182,7 +182,7 @@ background-color: rgba(0,0,0,0.5);
     opacity: 0.7;
     padding: 5%;
 }
-.divider-user{
+.divider-user {
     display: block;
     overflow: hidden;
     white-space: nowrap;
@@ -198,7 +198,7 @@ background-color: rgba(0,0,0,0.5);
 }
 /* header-menu */
 
-.header-menu{
+.header-menu {
 	box-sizing: border-box;
 	display: flex;
 	align-items: stretch;
@@ -209,11 +209,11 @@ background-color: rgba(0,0,0,0.5);
 	min-height: 89px;
 	background-color: rgba(0, 0, 0, 0.6);
 }
-.menu-header{
+.menu-header {
 	padding-top: 29px;
 }
 
-.header-menu_list{
+.header-menu_list {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: stretch;
@@ -223,17 +223,17 @@ background-color: rgba(0,0,0,0.5);
 	margin-left: -20px;
 
 }
-.header-menu_item{
+.header-menu_item {
 	display: flex;
 	align-items: stretch;
 	justify-content: center;
 	min-height: 89px;
 	transition: background 0.5s;
 }
-.header-menu_item:hover{
+.header-menu_item:hover {
 	background-color: rgba(255,255,255,0.3);
 }
-.header-menu_link{
+.header-menu_link {
 	display: flex;
 	align-items: center;
 	padding: 0 60px;
@@ -245,10 +245,10 @@ background-color: rgba(0,0,0,0.5);
 }
 
 /* footer */
-.widgets-wrapper{
+.widgets-wrapper {
     adding: 0 0 20px;
 }
-.share-footer{
+.share-footer {
     position: relative;
     display: block;
     margin-left: auto;
@@ -279,7 +279,7 @@ background-color: rgba(0,0,0,0.5);
 .inline-block {
     display: inline-block;
 }
-.btn{
+.btn {
     padding: 1px 5px;
     position: relative;
     white-space: normal;
@@ -289,7 +289,7 @@ background-color: rgba(0,0,0,0.5);
 .box-cell {
     display: table-cell !important;
 }
-.btn-default{
+.btn-default {
     color: #333;
     background-color: #fff;
     border-color: #ccc;
@@ -389,7 +389,7 @@ background-color: rgba(0,0,0,0.5);
     background-color: rgba(0, 0, 0, 0.5);
     border-color: rgba(0, 0, 0, 0.1);
 }
-.btn-primary:hover{
+.btn-primary:hover {
   background-color: rgba(255, 255, 255, 0.1);
   border-color: rgba(0, 0, 0, 0.1);
 }

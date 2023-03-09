@@ -51,17 +51,17 @@ svg {
     fill: currentColor;
 }
 /* usr-auth-header */
-.content-center{
+.content-center {
     display: flex;
     flex: 1;
     flex-direction: column;
     align-items: center;
 }
-.greyframe{
+.greyframe {
     color: #000;
     background-color: #f9f9f9;
 }
-.view-wrapper{
+.view-wrapper {
     padding: 2em 0 1em;
     display: flex;
     flex: 1;
@@ -71,35 +71,35 @@ svg {
     justify-content: center;
     flex-flow: column nowrap;
 }
-.vfg-grid{
+.vfg-grid {
     box-sizing: border-box;
 }
-.auth-logo{
+.auth-logo {
     max-width: 500px;
     height: auto;
 }
-.divider{
+.divider {
     display: block;
     width: 100%;
     clear: both;
     height: 3em;
 }
-.saction-wrapper{
+.saction-wrapper {
     padding: 2rem;
 }
-.whiteframe{
+.whiteframe {
     color: #000;
     background-color: #fff;
 }
-.shadowframe{
+.shadowframe {
     box-shadow: 1px 1px 4px 0 rgb(0 0 0 / 20%);
 }
-.headline{
+.headline {
     font-size: 1.5rem;
     margin-top: 0;
     margin-bottom: 2rem;
 }
-.signInButton{
+.signInButton {
     display: flex;
     justify-content: left;
     align-items: center;
@@ -111,22 +111,22 @@ svg {
     font-weight: 700;
     color: #fff;
 }
-.buttonText{
+.buttonText {
     margin-left: 1rem;
 }
-.steamButton{
+.steamButton {
     background-color: #53565a;
     border-color: #53565a;
 }
-.fbButton{
+.fbButton {
     background-color: #4267b2;
     border-color: #4267b2;
 }
-.googleButton{
+.googleButton {
     border-color: #53565a;
     color: #53565a;
 }
-.divider-or{
+.divider-or {
     display: block;
     text-align: center;
     overflow: hidden;
@@ -135,13 +135,13 @@ svg {
     padding: 1em 0;
     width: 100%;
 }
-.divider-or span{
+.divider-or span {
     position: relative;
     display: inline-block;
     font-size: 1em;
     color: #000;
 }
-.divider-or span::before{
+.divider-or span::before {
     width: 500px;
     content: "";
     height: 1px;
@@ -151,7 +151,7 @@ svg {
     right: 100%;
     margin-right: 20px;
 }
-.divider-or span::after{
+.divider-or span::after {
     width: 500px;
     content: "";
     height: 1px;
@@ -161,7 +161,7 @@ svg {
     left: 100%;
     margin-left: 20px;
 }
-.field-wrapper{
+.field-wrapper {
     margin-bottom: 2.5rem;
     width: 100%;
     position: relative;
@@ -176,7 +176,7 @@ svg {
     appearance: none;
     transition: background-color .2s,border-color .2s;
 }
-.field-wrapper .errors-wrapper{
+.field-wrapper .errors-wrapper {
     color: #da9da0;
     margin-top: 0.5rem;
     position: absolute;
@@ -187,14 +187,15 @@ svg {
     text-align: left;
     font-size: .85rem;
 }
-.Password__strength-meter{
+.Password__strength-meter
     position: relative;
     height: 3px;
     background: #ddd;
     margin: 10px auto 20px;
     border-radius: 3px;
 }
-.Password__strength-meter:after, .Password__strength-meter:before {
+.Password__strength-meter:after,
+.Password__strength-meter:before {
     content: "";
     height: inherit;
     background: transparent;
@@ -240,15 +241,15 @@ svg {
     background: green;
     width: 100%;
 }
-.consentText{
+.consentText {
     text-align: left;
     margin-left: 1rem;
     font-size: .9rem;
 }
-.consent{
+.consent {
     display: flex
 }
-.button-content{
+.button-content {
     cursor: pointer;
     border: 0;
     color: #fff;
@@ -263,17 +264,17 @@ svg {
     transition: background-color .2s,color .2s;
     box-shadow: 1px 1px 4px 0 rgb(0 0 0 / 20%);
 }
-.button-bg{
+.button-bg {
     padding-left: 2.5em;
     padding-right: 2.5em;
 }
-.re_center{
+.re_center {
     margin-right: -1em;
     margin-left: -1em;
     justify-content: center;
     flex-flow: row nowrap;
 }
-.re-ce{
+.re-ce {
     box-sizing: border-box;
     display: flex;
     flex: 0 1 auto;

@@ -1,13 +1,13 @@
-.post-blog-detail-main{
+.post-blog-detail-main {
     position: relative;
 }
-.container{
+.container {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 1170px;
 }
-.page-header{
+.page-header {
     text-align: center;
     position: relative;
     height: 400px;
@@ -17,7 +17,7 @@
     z-index: 0;
     margin: 40px 0 20px;
 }
-.page-title{
+.page-title {
     font-size: 28px;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -26,16 +26,16 @@
     color: inherit;
     margin: 0.67em 0;
 }
-.page-bg{
+.page-bg {
     background-color: rgba(0, 0, 0, 0.5);
     border-color: rgba(0, 0, 0, 0.1);
 }
-.page-t{
+.page-t {
     position: relative;
     transition: color 0.5s, opacity 0.5s, border-color 0.5s, background-color 0.5s;
 }
-.text-medium{
-display: inline-block;
+.text-medium {
+    display: inline-block;
     margin-bottom: 0;
     font-weight: normal;
     text-align: center;
@@ -84,7 +84,7 @@ display: inline-block;
     font-weight: 300;
     overflow: hidden;
 }
-.tile img{
+.tile img {
   display:block;
   margin-left:auto;
   margin-right:auto;
