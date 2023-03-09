@@ -61,6 +61,8 @@ class ExpandPost(models.Model):
     )
     body_editorjs = EditorJsJSONField(readOnly=False, autofocus=True, default="")
 
+    def get_absolute_url(self):
+        return reverse('expandpost', kwargs={'ep_slug': self.slug})
 
     def __str__(self):
         return self.name
