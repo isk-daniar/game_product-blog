@@ -2,7 +2,7 @@ version: "3.9"
 services:
   web:
     build: .
-    env_file: config/.env
+    env_file: game_blog_project/config/.env
     command: python3 manage.py runserver 127.0.0.1:8000
     volumes:
       - .:/code
@@ -13,7 +13,7 @@ services:
 
   postgres:
     image: postgres:14
-    env_file: config/.env
+    env_file: game_blog_project/config/.env
     volumes:
       - pgdata:/var/lib/postgresql/data
     ports:
