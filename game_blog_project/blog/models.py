@@ -37,11 +37,17 @@ class PostBlog(models.Model):
     )
     image = models.ImageField(upload_to='Blog/images/')
     create_at = models.DateTimeField(auto_now_add=True)
-    slug = models.SlugField(max_length=200, default="")
-    user = models.ForeignKey(User, verbose_name='Users', on_delete=models.CASCADE)
+    slug = models.SlugField(max_length=200,
+                            default="")
+    user = models.ForeignKey(User, verbose_name='Users',
+                             on_delete=models.CASCADE)
+
+    class Meta:
+        ordering = ['-create_at']
 
     def get_absolute_url(self):
-        return reverse("postblog_single", kwargs={"slug":self.category.slug, "postblog_slug": self.slug})
+        return reverse("postblog_single", kwargs={"slug":self.category.slug,
+                                                  "postblog_slug": self.slug})
 
     def get_recipes(self):
         return self.expandpostblog.all()
@@ -52,14 +58,17 @@ class PostBlog(models.Model):
 class ExpandPost(models.Model):
     name = models.CharField(max_length=100)
     create_at = models.DateTimeField(auto_now_add=True)
-    slug = models.SlugField(max_length=200, default="")
+    slug = models.SlugField(max_length=200,
+                            default="")
     postblog = models.ForeignKey(
         PostBlog,
         related_name="expandpostblog",
         on_delete=models.SET_NULL,
         null=True
     )
-    body_editorjs = EditorJsJSONField(readOnly=False, autofocus=True, default="")
+    body_editorjs = EditorJsJSONField(readOnly=False,
+                                      autofocus=True,
+                                      default="")
 
     def get_absolute_url(self):
         return reverse('expandpost', kwargs={'ep_slug': self.slug})

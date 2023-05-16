@@ -1,7 +1,8 @@
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
-from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.shortcuts import render, get_object_or_404
 
+from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from .models import PostBlog, Category, ExpandPost
 from forms import AddPostBlogForm, AddExpandPostForm
 
@@ -23,6 +24,7 @@ class PostDetailView(DetailView):
     context_object_name = "postblog"
     slug_url_kwarg = 'postblog_slug'
 
+
 class BlogCategory(ListView):
     model = Category
     template_name = "blog/list_categories.html"
@@ -31,7 +33,8 @@ class BlogCategory(ListView):
 def blog_form(request):
     form = AddPostBlogForm()
     if request.method == 'POST':
-        form = AddPostBlogForm(request.POST, request.FILES)
+        form = AddPostBlogForm(request.POST,
+                               request.FILES)
         form.instance.user = request.user
 
         if form.is_valid():
